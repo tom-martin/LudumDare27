@@ -1,10 +1,10 @@
 function CollisionManager(player, others) {
   this.update = function() {
     var bounds = player.bounds();
-    var nextBounds = player.nextBounds();
 
     for(i in others) {
       var other = others[i];
+      var nextBounds = player.nextBounds();
 
       var otherBounds = other.bounds();
       if(!(nextBounds.left > otherBounds.right || 

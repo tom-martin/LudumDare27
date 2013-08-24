@@ -21,41 +21,46 @@ var requestAnimFrame = (function(){
   </head>
   <body>
     <canvas id="gameCanvas" width="1024" height="600">Fallback content, in case the browser does not support Canvas.</canvas>
+    <textarea Name="content" rows=100 cols=128></textarea>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
 $(function() {
   var $document = $(document);
   var $canvas = $("canvas");
+  var $text = $("textarea");
   canvas = $("canvas").get(0);
   context = canvas.getContext('2d');
 
-  var keys = {
-    left: false,
-    right: false,
-    jump: false
+  var mode = "scroll";
+
+  var level = {
+    platforms: [],
+    batteries: []
   };
 
+  var gridSize = 50;
+
+  var snapPoint = function(p) {
+    return Math.round(p / gridSize) * gridSize;
+  }
+
   $document.keydown(function(e) {
-    if(e.keyCode==37) {
-      keys['left'] = true;
-    } else if(e.keyCode==39) {
-      keys['right'] = true;
-    } else if(e.keyCode==32) {
-      keys['jump'] = true;
+    if(e.keyCode==83) {
+      mode = "scroll";
+    } else if(e.keyCode==68) {
+      mode = "draw";
+    } else if(e.keyCode==66) {
+      mode = "battery";
+    } else if(e.keyCode==90) {
+      if(mode == "draw") {
+        level.platforms.pop();
+      } else if( mode == "battery") {
+        level.batteries.pop();
+      }
+    } else if(e.keyCode==82) { 
+      $text.val(JSON.stringify(level));
     }
   });
-
-  $document.keyup(function(e) {
-    if(e.keyCode==37) {
-      keys['left'] = false;
-    } else if(e.keyCode==39) {
-      keys['right'] = false;
-    } else if(e.keyCode==32) {
-      keys['jump'] = false;
-    }
-  });
-
-  var mode = "draw";
 
   var x = -Math.round(canvas.width/2);
   var y = -Math.round(canvas.height/2);
@@ -66,7 +71,14 @@ $(function() {
 
   var currentPlatform = null;
 
-  $canvas.mousedown(function() {
+  $canvas.mousedown(function(e) {
+    var canvasX = e.clientX - rect.left;
+    var canvasY = e.clientY - rect.top;
+
+    if(mode == "battery") {
+      level.batteries.push([x+canvasX, y+canvasY]);
+    }
+
     $(window).mousemove(function(e) {
       isDragging = true;
       $(window).unbind("mousemove");
@@ -75,14 +87,20 @@ $(function() {
       previousDragY = e.clientY;
 
       if(mode == "draw") {
-        
+        var canvasX = e.clientX - rect.left;
+        var canvasY = e.clientY - rect.top;
+        currentPlatform = [snapPoint(x+canvasX), snapPoint(y+canvasY), 10, 10];
       }
 
     });
   }).mouseup(function() {
     var wasDragging = isDragging;
     isDragging = false;
-    $(window).unbind("mousemove");      
+    $(window).unbind("mousemove");
+    if(currentPlatform != null) {
+      level.platforms.push(currentPlatform);
+      currentPlatform = null;
+    }     
   }).mousemove(function(e) {
     if(isDragging) {
 
@@ -90,22 +108,18 @@ $(function() {
         x += previousDragX - e.clientX;
         y += previousDragY - e.clientY;
       } else if(mode == "draw") {
-
+        var canvasX = e.clientX - rect.left;
+        var canvasY = e.clientY - rect.top;
+        currentPlatform[2] = snapPoint((x+canvasX)-currentPlatform[0]);
+        currentPlatform[3] = snapPoint((y+canvasY)-currentPlatform[1]);
       }
 
 
       previousDragX = e.clientX;
       previousDragY = e.clientY;
-      console.log("Dragging:"+x);
     }
   });
-
-  var level = {
-    platforms: [],
-    batteries: []
-  };
-
-  
+ 
 
   function render() {
     
@@ -117,7 +131,25 @@ $(function() {
     context.translate(-x, -y);
     //context.scale(0.5, 0.5);
     context.fillStyle="#0000FF";
-    context.fillRect(-15, -15, 30, 30)
+    context.fillRect(85, 115, 30, 30)
+
+    context.fillStyle="#FFFFFF";
+    if(currentPlatform != null) {
+      console.log(currentPlatform);
+      context.fillRect(currentPlatform[0], currentPlatform[1], currentPlatform[2], currentPlatform[3]);
+    }
+
+    for(i in level.platforms) {
+      var p = level.platforms[i];
+      context.fillRect(p[0], p[1], p[2], p[3]) 
+    }
+
+    context.fillStyle="#00FF00";
+    for(i in level.batteries) {
+      var b = level.batteries[i];
+      context.fillRect(b[0]-5,b[1]-5,10,10);
+    }
+      
 
    
 

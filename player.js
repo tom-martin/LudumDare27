@@ -7,12 +7,12 @@ function Player(initX, initY) {
 
   this.jumping = false;
 
-  this.speed = 0.6;
+  this.speed = 0.7;
   this.xAcceleration = 0.002;
   this.gravityMax = 10;
   this.gravitySpeed = 0.4;
-  this.initialJumpFuel = 650;
-  this.jumpSpeed = this.gravitySpeed+0.6;
+  this.initialJumpFuel = 700;
+  this.jumpSpeed = this.gravitySpeed+0.7;
   this.jumpXSpeed = 0.8;
 
   this.xMomentum = 0;
@@ -80,44 +80,44 @@ function Player(initX, initY) {
 
   this.render = function(context) {
     context.fillStyle="#0000FF";
-    context.fillRect(this.x-15,this.y-15,30,30);
+    context.fillRect(this.x-15,this.y-30,30,60);
   };
 
   this.bounds = function() {
     return {
       left: this.x - 15,
-      top: this.y - 15,
+      top: this.y - 30,
       right: this.x + 15,
-      bottom: this.y + 15
+      bottom: this.y + 30
     };
   };
 
   this.nextBounds = function() {
     return {
       left: this.nextX - 15,
-      top: this.nextY - 15,
+      top: this.nextY - 30,
       right: this.nextX + 15,
-      bottom: this.nextY + 15
+      bottom: this.nextY + 30
     };
   };
 
   this.collided = function(other, bounds, nextBounds, withBounds) {
     if(other.constructor.name == "Platform") {
-      if((bounds.bottom > withBounds.top && bounds.bottom < withBounds.bottom) || 
-          (bounds.top > withBounds.top && bounds.top < withBounds.bottom)) {
-        var xOverlap = Math.max(0, Math.min(nextBounds.right,withBounds.right) - Math.max(nextBounds.left,withBounds.left))
-        if(this.x < this.nextX) {
-          this.nextX -= xOverlap;
-        } else if(this.x > this.nextX) {
-          this.nextX += xOverlap;
-        }
-      } else {
+      if((bounds.bottom <= withBounds.top && nextBounds.bottom >= withBounds.top) || 
+          (bounds.top >= withBounds.bottom && nextBounds.top <= withBounds.bottom)) {
         var yOverlap = Math.max(0, Math.min(nextBounds.bottom,withBounds.bottom) - Math.max(nextBounds.top,withBounds.top))
         if(this.y < this.nextY) {
           this.nextY -= yOverlap;
           this.jumpFuel = this.initialJumpFuel;
         } else if(this.y > this.nextY) {
           this.nextY += yOverlap;
+        }
+      } else {
+        var xOverlap = Math.max(0, Math.min(nextBounds.right,withBounds.right) - Math.max(nextBounds.left,withBounds.left))
+        if(this.x < this.nextX) {
+          this.nextX -= xOverlap;
+        } else if(this.x > this.nextX) {
+          this.nextX += xOverlap;
         }
       }
     } else if(other.constructor.name == "Battery") {

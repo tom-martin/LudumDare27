@@ -20,7 +20,7 @@ var requestAnimFrame = (function(){
 </script>
   </head>
   <body>
-    <canvas id="gameCanvas" width="1024" height="600">Fallback content, in case the browser does not support Canvas.</canvas>
+    <canvas id="gameCanvas" width="1440" height="900">Fallback content, in case the browser does not support Canvas.</canvas>
     <script src="player.js"></script>
     <script src="platform.js"></script>
     <script src="collision.js"></script>
@@ -60,7 +60,7 @@ $(function() {
   canvas = $("canvas").get(0);
   context = canvas.getContext('2d');
 
-  var player = new Player(0, -130);
+  var player = new Player(100, -200);
 
   var platforms = [];
   var entities = [];
