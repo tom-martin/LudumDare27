@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>Level Editor</title>
+    <script type='text/javascript'>
+
+
+// A cross-browser requestAnimationFrame
+// See https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/
+var requestAnimFrame = (function(){
+  return window.requestAnimationFrame       ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame    ||
+    window.oRequestAnimationFrame      ||
+    window.msRequestAnimationFrame     ||
+    function(callback){
+        window.setTimeout(callback, 1000 / 60);
+    };
+})();
+
+</script>
+  </head>
+  <body>
+    <canvas id="gameCanvas" width="1024" height="600">Fallback content, in case the browser does not support Canvas.</canvas>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+$(function() {
+  var $document = $(document);
+  var $canvas = $("canvas");
+  canvas = $("canvas").get(0);
+  context = canvas.getContext('2d');
+
+  var keys = {
+    left: false,
+    right: false,
+    jump: false
+  };
+
+  $document.keydown(function(e) {
+    if(e.keyCode==37) {
+      keys['left'] = true;
+    } else if(e.keyCode==39) {
+      keys['right'] = true;
+    } else if(e.keyCode==32) {
+      keys['jump'] = true;
+    }
+  });
+
+  $document.keyup(function(e) {
+    if(e.keyCode==37) {
+      keys['left'] = false;
+    } else if(e.keyCode==39) {
+      keys['right'] = false;
+    } else if(e.keyCode==32) {
+      keys['jump'] = false;
+    }
+  });
+
+  var mode = "draw";
+
+  var x = -Math.round(canvas.width/2);
+  var y = -Math.round(canvas.height/2);
+  var isDragging = false;
+  var previousDragX = null;
+  var previousDragY = null;
+  var rect = canvas.getBoundingClientRect();
+
+  var currentPlatform = null;
+
+  $canvas.mousedown(function() {
+    $(window).mousemove(function(e) {
+      isDragging = true;
+      $(window).unbind("mousemove");
+
+      previousDragX = e.clientX;
+      previousDragY = e.clientY;
+
+      if(mode == "draw") {
+        
+      }
+
+    });
+  }).mouseup(function() {
+    var wasDragging = isDragging;
+    isDragging = false;
+    $(window).unbind("mousemove");      
+  }).mousemove(function(e) {
+    if(isDragging) {
+
+      if(mode == "scroll") {
+        x += previousDragX - e.clientX;
+        y += previousDragY - e.clientY;
+      } else if(mode == "draw") {
+
+      }
+
+
+      previousDragX = e.clientX;
+      previousDragY = e.clientY;
+      console.log("Dragging:"+x);
+    }
+  });
+
+  var level = {
+    platforms: [],
+    batteries: []
+  };
+
+  
+
+  function render() {
+    
+
+    canvas.width = canvas.width;
+    context.fillStyle="#202020";
+    context.fillRect(0,0,canvas.width,canvas.height);
+
+    context.translate(-x, -y);
+    //context.scale(0.5, 0.5);
+    context.fillStyle="#0000FF";
+    context.fillRect(-15, -15, 30, 30)
+
+   
+
+    requestAnimFrame(render);
+  }
+
+  requestAnimFrame(render);
+
+});
+    </script>
+  </body>
+</html>
+     

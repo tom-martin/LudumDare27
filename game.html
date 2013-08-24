@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>Ludum Dare 27</title>
+    <script type='text/javascript'>
+
+
+// A cross-browser requestAnimationFrame
+// See https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/
+var requestAnimFrame = (function(){
+  return window.requestAnimationFrame       ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame    ||
+    window.oRequestAnimationFrame      ||
+    window.msRequestAnimationFrame     ||
+    function(callback){
+        window.setTimeout(callback, 1000 / 60);
+    };
+})();
+
+</script>
+  </head>
+  <body>
+    <canvas id="gameCanvas" width="1024" height="600">Fallback content, in case the browser does not support Canvas.</canvas>
+    <script src="player.js"></script>
+    <script src="platform.js"></script>
+    <script src="collision.js"></script>
+    <script src="battery.js"></script>
+    <script src="levels.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+$(function() {
+  var $document = $(document);
+  var keys = {
+    left: false,
+    right: false,
+    jump: false
+  };
+
+  $document.keydown(function(e) {
+    if(e.keyCode==37) {
+      keys['left'] = true;
+    } else if(e.keyCode==39) {
+      keys['right'] = true;
+    } else if(e.keyCode==32) {
+      keys['jump'] = true;
+    }
+  });
+
+  $document.keyup(function(e) {
+    if(e.keyCode==37) {
+      keys['left'] = false;
+    } else if(e.keyCode==39) {
+      keys['right'] = false;
+    } else if(e.keyCode==32) {
+      keys['jump'] = false;
+    }
+  });
+
+  var $canvas = $("canvas");
+  canvas = $("canvas").get(0);
+  context = canvas.getContext('2d');
+
+  var player = new Player(0, -130);
+
+  var platforms = [];
+  var entities = [];
+  var batteries = [];
+  for(i in level1.platforms) {
+    var p = level1.platforms[i];
+    var newP = new Platform(p[0], p[1], p[2], p[3]);
+    platforms.push(newP);
+    entities.push(newP)
+  }
+
+  for(i in level1.batteries) {
+    var b = level1.batteries[i];
+    var newB = new Battery(b[0], b[1]);
+    batteries.push(newB);
+    entities.push(newB)
+  }
+  
+  var collison = new CollisionManager(player, entities);
+
+  var previousTs = -1;
+
+  function render() {
+    var nts = Date.now();
+    var dt = 0
+    if(previousTs > -1) {
+      dt = nts - previousTs;
+    }
+    previousTs = nts;
+
+
+    player.update(dt, keys);
+    collison.update();
+    player.applyUpdate();
+
+    canvas.width = canvas.width;
+    context.fillStyle="#202020";
+    context.fillRect(0,0,canvas.width,canvas.height);
+
+    context.fillStyle="#00FF00";
+    context.fillRect(5,5,Math.round(player.fuel/100),20);
+
+    var translationX = Math.round(player.x);
+    var translationY = Math.round(player.y - 200);
+
+    context.translate(Math.round(canvas.width/2),Math.round(canvas.height/2));
+    context.translate(-translationX,-translationY);
+
+    for(i in platforms) {
+      platforms[i].render(context);
+    }
+
+    for(i in batteries) {
+      batteries[i].render(context);
+    }
+
+    player.render(context);
+
+    requestAnimFrame(render);
+  }
+
+  requestAnimFrame(render);
+
+});
+    </script>
+  </body>
+</html>
+     
