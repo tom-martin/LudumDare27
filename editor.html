@@ -33,15 +33,21 @@ $(function() {
 
   var mode = "scroll";
 
+  var zoom = 1;
+
   var level = {
     platforms: [],
     batteries: []
   };
 
-  var gridSize = 50;
+  var gridSize = 64;
 
   var snapPoint = function(p) {
     return Math.round(p / gridSize) * gridSize;
+  }
+
+  var zoomPoint = function(p) {
+    return p / zoom; 
   }
 
   $document.keydown(function(e) {
@@ -59,6 +65,12 @@ $(function() {
       }
     } else if(e.keyCode==82) { 
       $text.val(JSON.stringify(level));
+    } else if(e.keyCode==76) { 
+      level = JSON.parse($text.val());
+    } else if(e.keyCode==189) { 
+      zoom *= 0.5;
+    } else if(e.keyCode==187) { 
+      zoom *= 2;
     }
   });
 
@@ -76,7 +88,7 @@ $(function() {
     var canvasY = e.clientY - rect.top;
 
     if(mode == "battery") {
-      level.batteries.push([x+canvasX, y+canvasY]);
+      level.batteries.push([snapPoint(zoomPoint(x+canvasX)), snapPoint(zoomPoint(y+canvasY))]);
     }
 
     $(window).mousemove(function(e) {
@@ -89,7 +101,7 @@ $(function() {
       if(mode == "draw") {
         var canvasX = e.clientX - rect.left;
         var canvasY = e.clientY - rect.top;
-        currentPlatform = [snapPoint(x+canvasX), snapPoint(y+canvasY), 10, 10];
+        currentPlatform = [snapPoint(zoomPoint(x+canvasX)), snapPoint(zoomPoint(y+canvasY)), 10, 10];
       }
 
     });
@@ -110,8 +122,8 @@ $(function() {
       } else if(mode == "draw") {
         var canvasX = e.clientX - rect.left;
         var canvasY = e.clientY - rect.top;
-        currentPlatform[2] = snapPoint((x+canvasX)-currentPlatform[0]);
-        currentPlatform[3] = snapPoint((y+canvasY)-currentPlatform[1]);
+        currentPlatform[2] = snapPoint(zoomPoint((x+canvasX))-currentPlatform[0]);
+        currentPlatform[3] = snapPoint(zoomPoint((y+canvasY))-currentPlatform[1]);
       }
 
 
@@ -129,7 +141,7 @@ $(function() {
     context.fillRect(0,0,canvas.width,canvas.height);
 
     context.translate(-x, -y);
-    //context.scale(0.5, 0.5);
+    context.scale(zoom, zoom);
     context.fillStyle="#0000FF";
     context.fillRect(-68, -93, 128, 186);
 
