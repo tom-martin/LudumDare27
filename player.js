@@ -1,4 +1,4 @@
-function Player(initX, initY) {
+function Player(initX, initY, img) {
   this.x = initX;
   this.y = initY;
 
@@ -12,24 +12,27 @@ function Player(initX, initY) {
   this.gravityMax = 10;
   this.gravitySpeed = 0.4;
   this.initialJumpFuel = 700;
-  this.jumpSpeed = this.gravitySpeed+0.7;
+  this.jumpSpeed = this.gravitySpeed+1;
   this.jumpXSpeed = 0.8;
 
   this.xMomentum = 0;
   this.jumpFuel = this.initialJumpFuel;
   this.direction = 0;
+  this.facingDirection = 1;
 
-  this.fuel = 10000;
+  this.fuel = 1000;
 
   this.update = function(dt, keys) {
     this.fuel = Math.max(0, this.fuel - dt);
     
-
+    var travelDir = 0;
     var prevDir = this.direction;
     if(keys['right']) {
       this.direction = 1;
+      this.facingDirection = 1;
     } else if(keys['left']) {
       this.direction = -1;
+      this.facingDirection = -1;
     } else {
       this.direction = 0;
     }
@@ -79,25 +82,37 @@ function Player(initX, initY) {
   };
 
   this.render = function(context) {
+
     context.fillStyle="#0000FF";
-    context.fillRect(this.x-15,this.y-30,30,60);
+
+    context.translate(this.x, this.y);
+    if(this.facingDirection < 0) {
+      context.scale(-1, 1);
+    }
+
+    context.drawImage(img, -(img.width / 2), -(img.height / 2));
+    
+    if(this.facingDirection < 0) {
+      context.scale(-1, 1);
+    }
+    context.translate(-this.x, -this.y);
   };
 
   this.bounds = function() {
     return {
-      left: this.x - 15,
-      top: this.y - 30,
-      right: this.x + 15,
-      bottom: this.y + 30
+      left: this.x - (img.width / 2),
+      top: this.y - (img.height / 2),
+      right: this.x + (img.width / 2),
+      bottom: this.y + (img.height / 2)
     };
   };
 
   this.nextBounds = function() {
     return {
-      left: this.nextX - 15,
-      top: this.nextY - 30,
-      right: this.nextX + 15,
-      bottom: this.nextY + 30
+      left: this.nextX - (img.width / 2),
+      top: this.nextY - (img.height / 2),
+      right: this.nextX + (img.width / 2),
+      bottom: this.nextY + (img.height / 2)
     };
   };
 
@@ -123,7 +138,7 @@ function Player(initX, initY) {
     } else if(other.constructor.name == "Battery") {
       if(!other.isCollected) {
         other.collected();
-        this.fuel = 10000;
+        this.fuel += 1000;
       }
     }
   };

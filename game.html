@@ -18,6 +18,9 @@ var requestAnimFrame = (function(){
 })();
 
 </script>
+<style>
+
+</style>
   </head>
   <body>
     <canvas id="gameCanvas" width="1440" height="900">Fallback content, in case the browser does not support Canvas.</canvas>
@@ -60,14 +63,23 @@ $(function() {
   canvas = $("canvas").get(0);
   context = canvas.getContext('2d');
 
-  var player = new Player(100, -200);
+  var playerImage = new Image();
+  playerImage.onload = function () {
+    render();
+  };
+  playerImage.src = "images/robot.png";
+
+  var platformImage = new Image();
+  platformImage.src = "images/brick.png";
+
+  var player = new Player(0, 0, playerImage);
 
   var platforms = [];
   var entities = [];
   var batteries = [];
   for(i in level1.platforms) {
     var p = level1.platforms[i];
-    var newP = new Platform(p[0], p[1], p[2], p[3]);
+    var newP = new Platform(p[0], p[1], p[2], p[3], platformImage);
     platforms.push(newP);
     entities.push(newP)
   }
@@ -91,23 +103,26 @@ $(function() {
     }
     previousTs = nts;
 
-
-    player.update(dt, keys);
-    collison.update();
-    player.applyUpdate();
+    // if(player.fuel > 0) {
+      player.update(dt, keys);
+      collison.update();
+      player.applyUpdate();
+    // }
 
     canvas.width = canvas.width;
     context.fillStyle="#202020";
     context.fillRect(0,0,canvas.width,canvas.height);
 
     context.fillStyle="#00FF00";
-    context.fillRect(5,5,Math.round(player.fuel/100),20);
+    context.fillRect(5,5,Math.round(player.fuel/10),20);
 
     var translationX = Math.round(player.x);
-    var translationY = Math.round(player.y - 200);
+    var translationY = Math.round(player.y - 50);
 
     context.translate(Math.round(canvas.width/2),Math.round(canvas.height/2));
+    context.scale(0.5, 0.5);
     context.translate(-translationX,-translationY);
+
 
     for(i in platforms) {
       platforms[i].render(context);
@@ -118,6 +133,7 @@ $(function() {
     }
 
     player.render(context);
+    
 
     requestAnimFrame(render);
   }
