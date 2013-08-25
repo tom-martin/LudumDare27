@@ -5,74 +5,49 @@ function Player(initX, initY, img) {
   this.nextX = this.x;
   this.nextY = this.y;
 
-  this.jumping = false;
+  this.fuel = 10000;
 
-  this.speed = 2;
-  this.xAcceleration = 0.002;
-  this.gravityMax = 45;
-  this.gravitySpeed = 1.6;
-  this.initialJumpFuel = 1400;
-  this.jumpSpeed = this.gravitySpeed+5;
+  this.direction = 1;
+  this.maxSpeed = 2;
+  this.xAcceleration = 0.004;
+  this.xVelocity = 0;
 
-  this.xMomentum = 0;
-  this.jumpFuel = this.initialJumpFuel;
-  this.direction = 0;
-  this.facingDirection = 1;
+  this.onGround = false;
+  this.gravityAcceleration = 0.002;
+  this.yVelocity = 0;
+  this.maxYSpeed = 10;
 
-  this.fuel = 1000;
+  this.jumpImpulse = -1.5;
 
   this.update = function(dt, keys) {
-    this.fuel = Math.max(0, this.fuel - dt);
-    
-    var travelDir = 0;
-    var prevDir = this.direction;
-    if(keys['right']) {
-      this.direction = 1;
-      this.facingDirection = 1;
-    } else if(keys['left']) {
-      this.direction = -1;
-      this.facingDirection = -1;
-    } else {
-      this.direction = 0;
-    }
-
-    if(this.direction != prevDir) {
-      this.xMomentum = 0;
-    }
-
-    if(keys['right']) {
-      this.xMomentum = Math.min(this.speed, this.xMomentum + (dt * this.xAcceleration));
-      
-    }
+    this.nextX = this.x;
+    this.nextY = this.y;
 
     if(keys['left']) {
-      this.xMomentum = Math.min(this.speed, this.xMomentum + (dt * this.xAcceleration));
-    }
-
-    if(this.direction != 0) {
-      this.nextX = this.x + (dt * this.xMomentum * this.direction);
-    }
-
-    if(keys['jump'] && this.jumpFuel > 0) {
-      this.jumping = true;
-      var cost = (this.jumpFuel / this.initialJumpFuel);
-      var jumpValue = Math.min((dt * this.jumpSpeed * cost), this.jumpFuel);
-      if(jumpValue < (this.gravitySpeed * dt)) {
-        jumpValue = 0;
-        this.jumpFuel = 0;
-      }
-      this.nextY = this.y - jumpValue;
-      this.jumpFuel -= jumpValue;
-      
-      if(this.direction != 0) {
-        this.jumpFuel -= (0.5 * jumpValue);
-      }
+      this.xVelocity = Math.max(-this.maxSpeed, this.xVelocity - dt * this.xAcceleration);
+      this.direction = -1;
+    } else if(keys['right']) {
+      this.xVelocity = Math.min(this.maxSpeed, this.xVelocity + dt * this.xAcceleration);
+      this.direction = 1;
     } else {
-      this.jumping = false;
-      this.jumpFuel = 0;
+      if(this.onGround) {
+        this.xVelocity *= 0.1;
+      }
     }
 
-    this.nextY = this.nextY + Math.min(this.gravityMax, (this.gravitySpeed * dt));
+    if(keys['jump'] && this.onGround) {
+      this.yVelocity = this.jumpImpulse;
+      this.onGround = false;
+    }
+
+    if(!this.onGround && !keys['jump'] && this.yVelocity > (this.jumpImpulse * 0.75)) {
+      this.yVelocity = Math.max(0, this.yVelocity);
+    }
+
+    this.yVelocity = Math.min(this.maxYSpeed, this.yVelocity + (dt * this.gravityAcceleration));
+
+    this.nextX += (this.xVelocity * dt);
+    this.nextY += (this.yVelocity * dt);
   };
 
   this.applyUpdate = function() {
@@ -85,15 +60,11 @@ function Player(initX, initY, img) {
     context.fillStyle="#0000FF";
 
     context.translate(this.x, this.y);
-    if(this.facingDirection < 0) {
-      context.scale(-1, 1);
-    }
+    context.scale(this.direction, 1);
 
     context.drawImage(img, -(img.width / 2), -(img.height / 2));
     
-    if(this.facingDirection < 0) {
-      context.scale(-1, 1);
-    }
+    context.scale(this.direction, 1);
     context.translate(-this.x, -this.y);
   };
 
@@ -122,7 +93,8 @@ function Player(initX, initY, img) {
         var yOverlap = Math.max(0, Math.min(nextBounds.bottom,withBounds.bottom) - Math.max(nextBounds.top,withBounds.top))
         if(this.y < this.nextY) {
           this.nextY -= yOverlap;
-          this.jumpFuel = this.initialJumpFuel;
+          this.onGround = true;
+          this.yVelocity = 0;
         } else if(this.y > this.nextY) {
           this.nextY += yOverlap;
         }
