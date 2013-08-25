@@ -1,4 +1,4 @@
-function Player(initX, initY, img) {
+function Player(initX, initY, img, jumpImg) {
   this.x = initX;
   this.y = initY;
 
@@ -19,9 +19,13 @@ function Player(initX, initY, img) {
 
   this.jumpImpulse = -1.5;
 
+  this.jumping = false;
+
   this.update = function(dt, keys) {
     this.nextX = this.x;
     this.nextY = this.y;
+
+    this.fuel -= dt;
 
     if(keys['left']) {
       this.xVelocity = Math.max(-this.maxSpeed, this.xVelocity - dt * this.xAcceleration);
@@ -38,6 +42,7 @@ function Player(initX, initY, img) {
     if(keys['jump'] && this.onGround) {
       this.yVelocity = this.jumpImpulse;
       this.onGround = false;
+      this.jumping = true;
     }
 
     if(!this.onGround && !keys['jump'] && this.yVelocity > (this.jumpImpulse * 0.75)) {
@@ -51,6 +56,10 @@ function Player(initX, initY, img) {
   };
 
   this.applyUpdate = function() {
+    if(this.y < this.nextY && this.onGround) {
+      console.log("falling");
+      this.onGround = false;
+    }
     this.x = this.nextX;
     this.y = this.nextY;
   };
@@ -62,7 +71,12 @@ function Player(initX, initY, img) {
     context.translate(this.x, this.y);
     context.scale(this.direction, 1);
 
-    context.drawImage(img, -(img.width / 2), -(img.height / 2));
+    var image = img;
+    if(this.jumping) {
+      image = jumpImg;
+    }
+
+    context.drawImage(image, -(img.width / 2), -(img.height / 2));
     
     context.scale(this.direction, 1);
     context.translate(-this.x, -this.y);
@@ -94,6 +108,7 @@ function Player(initX, initY, img) {
         if(this.y < this.nextY) {
           this.nextY -= yOverlap;
           this.onGround = true;
+          this.jumping = false;
           this.yVelocity = 0;
         } else if(this.y > this.nextY) {
           this.nextY += yOverlap;
@@ -102,8 +117,10 @@ function Player(initX, initY, img) {
         var xOverlap = Math.max(0, Math.min(nextBounds.right,withBounds.right) - Math.max(nextBounds.left,withBounds.left))
         if(this.x < this.nextX) {
           this.nextX -= xOverlap;
+          this.xVelocity = 0;
         } else if(this.x > this.nextX) {
           this.nextX += xOverlap;
+          this.xVelocity = 0;
         }
       }
     } else if(other.constructor.name == "Battery") {

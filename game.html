@@ -73,10 +73,13 @@ $(function() {
   };
   playerImage.src = "images/robot.png";
 
+  var jumpImage = new Image();
+  jumpImage.src = "images/robotjump.png";
+
   var platformImage = new Image();
   platformImage.src = "images/brick.png";
 
-  var player = new Player(0, 0, playerImage);
+  var player = new Player(0, 0, playerImage, jumpImage);
 
   var platforms = [];
   var entities = [];
