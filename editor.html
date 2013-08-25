@@ -38,6 +38,7 @@ $(function() {
   var level = {
     platforms: [],
     batteries: [],
+    spikes:    [],
     entrance: [0, 0],
     exit: null
   };
@@ -77,6 +78,8 @@ $(function() {
       mode = "entrance"
     } else if(e.keyCode==88) { 
       mode = "exit"
+    } else if(e.keyCode==75) { 
+      mode = "spike"
     }
   });
 
@@ -89,6 +92,7 @@ $(function() {
 
   var currentPlatform = null;
   var currentBattery = null;
+  var currentSpike = null;
 
   $canvas.mousedown(function(e) {
     var canvasX = e.clientX - rect.left;
@@ -109,10 +113,13 @@ $(function() {
       previousDragX = e.clientX;
       previousDragY = e.clientY;
 
+      var canvasX = e.clientX - rect.left;
+      var canvasY = e.clientY - rect.top;
+
       if(mode == "draw") {
-        var canvasX = e.clientX - rect.left;
-        var canvasY = e.clientY - rect.top;
         currentPlatform = [snapPoint(zoomPoint(x+canvasX)), snapPoint(zoomPoint(y+canvasY)), 10, 10];
+      } else if(mode == "spike") {
+        currentSpike = [snapPoint(zoomPoint(x+canvasX)), snapPoint(zoomPoint(y+canvasY)), 10, 10];
       }
 
     });
@@ -126,6 +133,11 @@ $(function() {
     if(currentPlatform != null) {
       level.platforms.push(currentPlatform);
       currentPlatform = null;
+    }
+
+    if(currentSpike != null) {
+      level.spikes.push(currentSpike);
+      currentSpike = null;
     }
 
     if(currentBattery != null) {
@@ -147,10 +159,11 @@ $(function() {
         x += previousDragX - e.clientX;
         y += previousDragY - e.clientY;
       } else if(mode == "draw") {
-        var canvasX = e.clientX - rect.left;
-        var canvasY = e.clientY - rect.top;
         currentPlatform[2] = snapPoint(zoomPoint((x+canvasX))-currentPlatform[0]);
         currentPlatform[3] = snapPoint(zoomPoint((y+canvasY))-currentPlatform[1]);
+      } else if(mode == "spike") {
+        currentSpike[2] = snapPoint(zoomPoint((x+canvasX))-currentSpike[0]);
+        currentSpike[3] = snapPoint(zoomPoint((y+canvasY))-currentSpike[1]);
       } else if(mode == "entrance") {
         level.entrance = [zoomPoint(x+canvasX), zoomPoint(y+canvasY)];
       } else if(mode == "exit") {
@@ -212,7 +225,6 @@ $(function() {
 
     context.fillStyle="#FFFFFF";
     if(currentPlatform != null) {
-      console.log(currentPlatform);
       context.fillRect(currentPlatform[0], currentPlatform[1], currentPlatform[2], currentPlatform[3]);
 
       context.beginPath();
@@ -226,6 +238,25 @@ $(function() {
 
       context.beginPath();
       context.rect(p[0], p[1], p[2], p[3]) 
+      context.stroke();
+    }
+
+    context.fillStyle="#FF0000";
+
+    if(currentSpike != null) {
+      context.fillRect(currentSpike[0], currentSpike[1], currentSpike[2], currentSpike[3]);
+
+      context.beginPath();
+      context.rect(currentSpike[0], currentSpike[1], currentSpike[2], currentSpike[3]);
+      context.stroke();
+    }
+
+    for(i in level.spikes) {
+      var s = level.spikes[i];
+      context.fillRect(s[0], s[1], s[2], s[3]);
+
+      context.beginPath();
+      context.rect(s[0], s[1], s[2], s[3]) 
       context.stroke();
     }
 

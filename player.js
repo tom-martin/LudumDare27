@@ -137,7 +137,7 @@ function Player(initX, initY, img, jumpImg) {
     } else if(other.constructor.name == "Battery") {
       if(!other.isCollected) {
         other.collected();
-        this.fuel += 1000;
+        this.fuel = Math.max(10000, 1000);
       }
     } else if(other.constructor.name == "Door") {
       if(!other.isOpen) {

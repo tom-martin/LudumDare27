@@ -30,6 +30,7 @@ var requestAnimFrame = (function(){
     <script src="collision.js"></script>
     <script src="battery.js"></script>
     <script src="door.js"></script>
+    <script src="spike.js"></script>
     <script src="levels.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
@@ -100,7 +101,11 @@ $(function() {
   var doorOpenImage = new Image();
   doorOpenImage.src = "images/opendoor.png";
 
+  var spikeImage = new Image();
+  spikeImage.src = "images/spike.png";
+
   var platforms = [];
+  var spikes = [];
   var entities = [];
   var batteries = [];
 
@@ -108,14 +113,21 @@ $(function() {
     var p = level1.platforms[i];
     var newP = new Platform(p[0], p[1], p[2], p[3], platformImage);
     platforms.push(newP);
-    entities.push(newP)
+    entities.push(newP);
+  }
+
+  for(i in level1.spikes) {
+    var s = level1.spikes[i];
+    var newS = new Spike(s[0], s[1], s[2], s[3], spikeImage);
+    spikes.push(newS);
+    entities.push(newS);
   }
 
   for(i in level1.batteries) {
     var b = level1.batteries[i];
     var newB = new Battery(b[0], b[1], battery1Image, battery2Image);
     batteries.push(newB);
-    entities.push(newB)
+    entities.push(newB);
   }
 
   var entrance = new Door(level1.entrance[0], level1.entrance[1], door1Image, door2Image, doorOpenImage);
@@ -127,6 +139,8 @@ $(function() {
   var player = new Player(level1.entrance[0], level1.entrance[1], playerImage, jumpImage);
   
   var collison = new CollisionManager(player, entities);
+
+  var spike = new Spike(0, -200, 800, 200, spikeImage);
 
   var previousTs = -1;
 
@@ -190,6 +204,10 @@ $(function() {
 
     entrance.render(context);
     exit.render(context);
+
+    for(i in spikes) {
+      spikes[i].render(context);
+    }
 
     for(i in platforms) {
       platforms[i].render(context);
