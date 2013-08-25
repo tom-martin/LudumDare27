@@ -84,6 +84,12 @@ $(function() {
   var platformImage = new Image();
   platformImage.src = "images/brick.png";
 
+  var battery1Image = new Image();
+  battery1Image.src = "images/battery1.png";
+
+  var battery2Image = new Image();
+  battery2Image.src = "images/battery2.png";
+
   var player = new Player(0, 0, playerImage, jumpImage);
 
   var platforms = [];
@@ -98,7 +104,7 @@ $(function() {
 
   for(i in level1.batteries) {
     var b = level1.batteries[i];
-    var newB = new Battery(b[0], b[1]);
+    var newB = new Battery(b[0], b[1], battery1Image, battery2Image);
     batteries.push(newB);
     entities.push(newB)
   }
@@ -133,26 +139,37 @@ $(function() {
     var translationY = Math.round(player.y - 50);
 
     context.translate(Math.round(canvas.width/2),Math.round(canvas.height/2));
-    context.scale(zoom, zoom);
+
+
+    var backZoom = zoom / 2;
+    context.scale(backZoom, backZoom);
 
     context.translate(-translationX,-translationY);
 
     if(backImage.width > 0) {
-      var initialY = player.y-((canvas.height / 2) / zoom)-backImage.height;
+      var initialY = player.y-((canvas.height / 2) / backZoom)-backImage.height;
       var roundedY = Math.floor(initialY / backImage.height)*backImage.height;
 
-      var initialX = player.x-((canvas.width / 2) / zoom)-backImage.width;
+      var initialX = player.x-((canvas.width / 2) / backZoom)-backImage.width;
       var roundedX = Math.floor(initialX / backImage.width)*backImage.width;
-      for(var backX = roundedX; backX < roundedX + (canvas.width/zoom)+(2 * backImage.width); backX += backImage.width) {
+      for(var backX = roundedX; backX < roundedX + (canvas.width/backZoom)+(2 * backImage.width); backX += backImage.width) {
         var initY = roundedY;
         if((backX / backImage.width) % 2 == 0) {
           initY += (backImage.height / 2);
         }
-        for(var backY = initY; backY < roundedY + (canvas.height/zoom)+(2 * backImage.height); backY += backImage.height) {
+        for(var backY = initY; backY < roundedY + (canvas.height/backZoom)+(2 * backImage.height); backY += backImage.height) {
           context.drawImage(backImage, backX, backY);
         }
       }
     }
+
+    context.translate(translationX,translationY);
+    context.scale(1/backZoom, 1/backZoom);
+
+    context.scale(zoom, zoom);
+
+    context.translate(-translationX,-translationY);
+
 
     for(i in platforms) {
       platforms[i].render(context);

@@ -13,7 +13,7 @@ function Platform(left, top, width, height, tile) {
     context.clip();
 
     if(tile.width > 0) {
-      for(var y = -2; y < height; y+= tile.height-2) {
+      for(var y = -15; y < height; y+= tile.height-15) {
         for(var x = -50; x < width; x+= tile.width-100) {
           context.drawImage(tile, left+x, top+y);
         }

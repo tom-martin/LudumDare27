@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="battery.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="336.17798"
+     inkscape:cy="348.94956"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2495"
+     inkscape:window-height="1416"
+     inkscape:window-x="1985"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3021"
+       transform="translate(3.03269,89.90803)"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/battery1.png"
+       inkscape:export-xdpi="36.585419"
+       inkscape:export-ydpi="36.585419">
+      <path
+         sodipodi:nodetypes="ccsccc"
+         inkscape:connector-curvature="0"
+         id="path2987"
+         d="m 301.62054,470.58929 c 0.51123,95.80423 -0.23438,193.02265 -1,288.1875 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.48661,-14.27016 80.48661,-31.84375 0.57541,-95.036 2.32589,-192.84217 2.32589,-288.1875 z"
+         style="fill:#9c9c9c;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 359.13461,452.83664 c 0,17.57359 -37.32288,31.8198 -83.36297,31.8198 -46.0401,0 -83.36297,-14.24621 -83.36297,-31.8198 0,-17.57359 37.32287,-31.81981 83.36297,-31.81981 46.04009,0 83.36297,14.24622 83.36297,31.81981 z"
+         sodipodi:ry="31.819805"
+         sodipodi:rx="83.362968"
+         sodipodi:cy="452.83664"
+         sodipodi:cx="275.77164"
+         id="path2998"
+         style="fill:#9c9c9c;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc"
+         transform="translate(109.64286,13.214286)" />
+    </g>
+    <path
+       style="fill:#ccff00;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 304.65323,650.08656 c 0.51123,95.80423 -0.23438,103.43341 -1,198.59826 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.46875,-14.27016 80.46875,-31.84375 0.57541,-95.036 2.34375,-103.25293 2.34375,-198.59826 m -1.40625,0 c -5.7788,15.42022 -40.50343,27.28125 -82.5,27.28125 -41.99657,0 -76.7212,-11.86103 -82.5,-27.28125"
+       id="path3014"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccscccsc"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/battery1.png"
+       inkscape:export-xdpi="36.585419"
+       inkscape:export-ydpi="36.585419" />
+    <g
+       transform="matrix(0.25419188,0,0,0.09478251,288.98118,486.78661)"
+       id="g3025"
+       style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-opacity:1"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/battery1.png"
+       inkscape:export-xdpi="36.585419"
+       inkscape:export-ydpi="36.585419">
+      <path
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-width:32.75267029;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 301.62054,470.58929 c 0.51123,95.80423 -0.23438,193.02265 -1,288.1875 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.48661,-14.27016 80.48661,-31.84375 0.57541,-95.036 2.32589,-192.84217 2.32589,-288.1875 z"
+         id="path3027"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccsccc" />
+      <path
+         transform="translate(109.64286,13.214286)"
+         sodipodi:type="arc"
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-width:32.75267029;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path3029"
+         sodipodi:cx="275.77164"
+         sodipodi:cy="452.83664"
+         sodipodi:rx="83.362968"
+         sodipodi:ry="31.819805"
+         d="m 359.13461,452.83664 c 0,17.57359 -37.32288,31.8198 -83.36297,31.8198 -46.0401,0 -83.36297,-14.24621 -83.36297,-31.8198 0,-17.57359 37.32287,-31.81981 83.36297,-31.81981 46.04009,0 83.36297,14.24622 83.36297,31.81981 z" />
+    </g>
+    <g
+       inkscape:export-ydpi="36.585419"
+       inkscape:export-xdpi="36.585419"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/battery2.png"
+       transform="matrix(0.96592583,0.25881905,-0.25881905,0.96592583,-162.73345,11.139844)"
+       id="g3866">
+      <path
+         style="fill:#9c9c9c;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 301.62054,470.58929 c 0.51123,95.80423 -0.23438,193.02265 -1,288.1875 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.48661,-14.27016 80.48661,-31.84375 0.57541,-95.036 2.32589,-192.84217 2.32589,-288.1875 z"
+         id="path3868"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccsccc" />
+      <path
+         transform="translate(109.64286,13.214286)"
+         sodipodi:type="arc"
+         style="fill:#9c9c9c;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path3870"
+         sodipodi:cx="275.77164"
+         sodipodi:cy="452.83664"
+         sodipodi:rx="83.362968"
+         sodipodi:ry="31.819805"
+         d="m 359.13461,452.83664 c 0,17.57359 -37.32288,31.8198 -83.36297,31.8198 -46.0401,0 -83.36297,-14.24621 -83.36297,-31.8198 0,-17.57359 37.32287,-31.81981 83.36297,-31.81981 46.04009,0 83.36297,14.24622 83.36297,31.81981 z" />
+    </g>
+    <path
+       inkscape:export-ydpi="36.585419"
+       inkscape:export-xdpi="36.585419"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/battery2.png"
+       sodipodi:nodetypes="ccscccsc"
+       inkscape:connector-curvature="0"
+       id="path3872"
+       d="m -16.375254,630.29589 c -24.302149,92.6721 -26.99693,99.84834 -52.366938,191.57237 -4.54838,16.97479 28.902126,40.71138 74.7071113,52.98479 45.8049847,12.27341 81.4202327,7.04293 85.9686127,-9.93186 25.152928,-91.6488 28.987718,-99.12806 53.664898,-191.22458 m -1.35833,-0.36396 c -9.57294,13.39912 -46.184217,15.8686 -86.749788,4.99909 -40.565572,-10.86951 -71.037128,-31.31378 -72.627974,-47.70423"
+       style="fill:#ccff00;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <g
+       inkscape:export-ydpi="36.585419"
+       inkscape:export-xdpi="36.585419"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/battery2.png"
+       style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-opacity:1"
+       id="g3874"
+       transform="matrix(0.2455305,0.0657897,-0.02453152,0.09155287,10.751845,468.50403)">
+      <path
+         sodipodi:nodetypes="ccsccc"
+         inkscape:connector-curvature="0"
+         id="path3876"
+         d="m 301.62054,470.58929 c 0.51123,95.80423 -0.23438,193.02265 -1,288.1875 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.48661,-14.27016 80.48661,-31.84375 0.57541,-95.036 2.32589,-192.84217 2.32589,-288.1875 z"
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-width:32.75267029;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 359.13461,452.83664 c 0,17.57359 -37.32288,31.8198 -83.36297,31.8198 -46.0401,0 -83.36297,-14.24621 -83.36297,-31.8198 0,-17.57359 37.32287,-31.81981 83.36297,-31.81981 46.04009,0 83.36297,14.24622 83.36297,31.81981 z"
+         sodipodi:ry="31.819805"
+         sodipodi:rx="83.362968"
+         sodipodi:cy="452.83664"
+         sodipodi:cx="275.77164"
+         id="path3878"
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-width:32.75267029;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc"
+         transform="translate(109.64286,13.214286)" />
+    </g>
+  </g>
+</svg>
