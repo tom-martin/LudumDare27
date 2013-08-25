@@ -57,7 +57,6 @@ function Player(initX, initY, img, jumpImg) {
 
   this.applyUpdate = function() {
     if(this.y < this.nextY && this.onGround) {
-      console.log("falling");
       this.onGround = false;
     }
     this.x = this.nextX;
