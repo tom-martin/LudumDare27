@@ -7,13 +7,12 @@ function Player(initX, initY, img) {
 
   this.jumping = false;
 
-  this.speed = 0.7;
+  this.speed = 2;
   this.xAcceleration = 0.002;
-  this.gravityMax = 10;
-  this.gravitySpeed = 0.4;
-  this.initialJumpFuel = 700;
-  this.jumpSpeed = this.gravitySpeed+1;
-  this.jumpXSpeed = 0.8;
+  this.gravityMax = 45;
+  this.gravitySpeed = 1.6;
+  this.initialJumpFuel = 1400;
+  this.jumpSpeed = this.gravitySpeed+5;
 
   this.xMomentum = 0;
   this.jumpFuel = this.initialJumpFuel;
@@ -66,7 +65,7 @@ function Player(initX, initY, img) {
       this.jumpFuel -= jumpValue;
       
       if(this.direction != 0) {
-        this.jumpFuel -= jumpValue;
+        this.jumpFuel -= (0.5 * jumpValue);
       }
     } else {
       this.jumping = false;
