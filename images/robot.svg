@@ -54,6 +54,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#ffaaaa;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;opacity:0"
+       id="rect7448"
+       width="35.355339"
+       height="431.33514"
+       x="725.28955"
+       y="272.52441"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
        d="m 300.12255,604.43325 c 0,0 62.14286,-67.85715 70,-187.14286 l 74.28571,16.42857 c -7.85714,119.28571 -70,187.14286 -70,187.14286 z"
@@ -359,5 +369,142 @@
        inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
        inkscape:export-xdpi="37.549999"
        inkscape:export-ydpi="37.549999" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -402.9182,130.72102 c -12.87037,0 -23.54181,9.47928 -25.66724,21.92932 -4.5964,-4.10329 -10.62348,-6.58452 -17.2102,-6.58452 -14.39923,0 -26.07437,11.85252 -26.07437,26.47168 0,14.56914 11.59507,26.39096 25.92633,26.47169 -0.0603,0.73479 -0.0925,1.4824 -0.0925,2.23301 0,14.61916 11.67514,26.47169 26.07437,26.47169 5.90147,0 11.32309,-2.00699 15.69274,-5.36305 6.19452,5.198 14.13475,8.32131 22.79888,8.32131 19.78212,0 35.80831,-16.27374 35.80831,-36.35801 l 0,-0.91611 c -0.45086,-18.14127 -13.9369,-32.88831 -31.21893,-35.13653 0.0137,-0.35201 0.037,-0.71339 0.037,-1.06879 l 0,-0.668 c -0.35674,-14.35449 -11.93133,-25.80369 -26.07438,-25.80369 z"
+       id="path6875"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/cloud1.png"
+       inkscape:export-xdpi="39.779999"
+       inkscape:export-ydpi="39.779999" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:33.25645828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path6885"
+       sodipodi:cx="-378.80722"
+       sodipodi:cy="137.16397"
+       sodipodi:rx="39.39595"
+       sodipodi:ry="39.39595"
+       d="m -339.41127,137.16397 a 39.39595,39.39595 0 1 1 -0.0125,-0.99372"
+       sodipodi:start="0"
+       sodipodi:end="6.2579587"
+       sodipodi:open="true"
+       transform="matrix(0.59217877,0,0,0.61073826,-81.850581,147.51992)"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/cloud1.png"
+       inkscape:export-xdpi="39.779999"
+       inkscape:export-ydpi="39.779999" />
+    <path
+       sodipodi:open="true"
+       sodipodi:end="6.2579587"
+       sodipodi:start="0"
+       d="m -339.41127,137.16397 a 39.39595,39.39595 0 1 1 -0.0125,-0.99372"
+       sodipodi:ry="39.39595"
+       sodipodi:rx="39.39595"
+       sodipodi:cy="137.16397"
+       sodipodi:cx="-378.80722"
+       id="path6887"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:33.25645828;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc"
+       transform="matrix(0.59217877,0,0,0.61073826,-249.34403,11.793388)"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/cloud1.png"
+       inkscape:export-xdpi="39.779999"
+       inkscape:export-ydpi="39.779999" />
+    <path
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path7430"
+       d="m 676.90945,613.52462 c 0,0 62.14286,-67.85715 70,-187.14286 l 74.28571,16.42857 c -7.85714,119.28571 -70,187.14286 -70,187.14286 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       sodipodi:nodetypes="sssssss"
+       inkscape:connector-curvature="0"
+       id="path7432"
+       d="m 652.50565,597.15387 c -27.61373,-9.46921 -52.875,23.68281 -52.875,52.875 0,29.19219 23.68281,52.84375 52.875,52.84375 l 150,0 c 14.99059,0 27.125,-12.13441 27.125,-27.125 0,-14.99059 -12.94497,-22.29368 -27.125,-27.15625 z"
+       style="fill:#4d4d4d;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:20, 20;stroke-dashoffset:0;marker-start:none" />
+    <path
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       d="m 291.42858,640.93359 a 12.857142,12.857142 0 1 1 -25.71428,0 12.857142,12.857142 0 1 1 25.71428,0 z"
+       sodipodi:ry="12.857142"
+       sodipodi:rx="12.857142"
+       sodipodi:cy="640.93359"
+       sodipodi:cx="278.57144"
+       id="path7434"
+       style="fill:#ffffff;stroke:#000000;stroke-width:20;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc"
+       transform="translate(376.7869,9.0913729)" />
+    <path
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       d="m 394.28571,658.79077 a 4.6428571,5 0 1 1 -9.28571,0 4.6428571,5 0 1 1 9.28571,0 z"
+       sodipodi:ry="5"
+       sodipodi:rx="4.6428571"
+       sodipodi:cy="658.79077"
+       sodipodi:cx="389.64285"
+       id="path7436"
+       style="fill:#ffffff;stroke:#000000;stroke-width:20;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc"
+       transform="translate(376.7869,9.0913729)" />
+    <path
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       sodipodi:nodetypes="csc"
+       inkscape:connector-curvature="0"
+       id="path7438"
+       d="m 792.03025,581.64176 c -7.06543,16.28538 -32.88933,20.76852 -57.6793,10.01337 -24.78996,-10.75514 -39.15854,-32.67582 -32.09312,-48.96121"
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
+       d="m 809.88739,540.92747 c -7.06543,16.28538 -32.88933,20.76852 -57.6793,10.01337 -24.78996,-10.75514 -39.15854,-32.67582 -32.09312,-48.96121"
+       id="path7440"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+    <path
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       sodipodi:nodetypes="csc"
+       inkscape:connector-curvature="0"
+       id="path7442"
+       d="m 824.88739,493.78461 c -7.06543,16.28538 -32.88933,20.76852 -57.6793,10.01337 -24.78996,-10.75514 -39.15854,-32.67582 -32.09312,-48.96121"
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       transform="matrix(1.3823529,0,0,1.3823529,314.91327,-128.88639)"
+       d="m 416.42859,368.79074 a 62.857143,62.857143 0 1 1 -125.71429,0 62.857143,62.857143 0 1 1 125.71429,0 z"
+       sodipodi:ry="62.857143"
+       sodipodi:rx="62.857143"
+       sodipodi:cy="368.79074"
+       sodipodi:cx="353.57144"
+       id="path7444"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc" />
+    <path
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robot2.png"
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-xdpi="37.549999"
+       transform="matrix(1.2218374,0,0,1.2218374,288.58821,-65.054944)"
+       d="m 470.71428,357.00504 a 18.214285,18.214285 0 1 1 -36.42856,0 18.214285,18.214285 0 1 1 36.42856,0 z"
+       sodipodi:ry="18.214285"
+       sodipodi:rx="18.214285"
+       sodipodi:cy="357.00504"
+       sodipodi:cx="452.5"
+       id="path7446"
+       style="fill:#ffaaaa;fill-opacity:1;stroke:#000000;stroke-width:16.36878967;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc" />
   </g>
 </svg>

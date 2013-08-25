@@ -8,6 +8,8 @@ function Battery(x, y, battery1Image, battery2Image) {
 
   this.isCollected = false;
 
+  this.collectedTime = -1;
+
   this.render = function(context) {
     if(!this.isCollected && battery1Image.height > 0) {
 
@@ -27,6 +29,17 @@ function Battery(x, y, battery1Image, battery2Image) {
       }
 
       context.translate(-x, -y);
+    } else if(this.collectedTime > 0) {
+      var timeElapsed = (Date.now() - this.collectedTime);
+      console.log(timeElapsed);
+      if(timeElapsed < 1000) {
+        context.font = "bold 72px Courier";
+        context.fillStyle = "white";
+        context.fillText("+1", x, y - (timeElapsed / 10));
+        context.lineWidth = 2;
+        context.strokeText("+1", x, y - (timeElapsed / 10));
+
+      }
     }
   };
 
@@ -43,6 +56,9 @@ function Battery(x, y, battery1Image, battery2Image) {
   };
 
   this.collected = function() {
+    if(!this.isCollected) {
+      this.collectedTime = Date.now();
+    }
     this.isCollected = true;
   }
 }

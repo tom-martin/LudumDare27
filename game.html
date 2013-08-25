@@ -48,24 +48,34 @@ $(function() {
   $document.keydown(function(e) {
     if(e.keyCode==37) {
       keys['left'] = true;
+
+      e.preventDefault();
     } else if(e.keyCode==39) {
       keys['right'] = true;
+
+      e.preventDefault();
     } else if(e.keyCode==32) {
       keys['jump'] = true;
-    } else if(e.keyCode==78) {
       keys['next'] = true;
+
+      e.preventDefault();
     }
   });
 
   $document.keyup(function(e) {
     if(e.keyCode==37) {
       keys['left'] = false;
+
+      e.preventDefault();
     } else if(e.keyCode==39) {
       keys['right'] = false;
+
+      e.preventDefault();
     } else if(e.keyCode==32) {
       keys['jump'] = false;
-    } else if(e.keyCode==78) {
       keys['next'] = false;
+
+      e.preventDefault();
     }
   });
 
@@ -73,7 +83,7 @@ $(function() {
   canvas = $("canvas").get(0);
   context = canvas.getContext('2d');
 
-  $canvas.width(Math.min($canvas.width(), $(window).width() - 200));
+  $canvas.width(Math.min($canvas.width(), $(window).width() - 50));
   $canvas.height(Math.min($canvas.height(), $(window).height() - 50));
 
   var $fps = $("#fps");
@@ -93,6 +103,14 @@ $(function() {
 
   var platformImage = new Image();
   platformImage.src = "images/brick.png";
+
+  var platformImage2 = new Image();
+  platformImage2.src = "images/brick2.png";
+
+  var platformImage3 = new Image();
+  platformImage3.src = "images/brick3.png";
+
+  var platformImages = [platformImage, platformImage2, platformImage3];
 
   var battery1Image = new Image();
   battery1Image.src = "images/battery1.png";
@@ -146,7 +164,7 @@ $(function() {
 
     for(i in level.platforms) {
       var p = level.platforms[i];
-      var newP = new Platform(p[0], p[1], p[2], p[3], platformImage);
+      var newP = new Platform(p[0], p[1], p[2], p[3], platformImages[levelIndex % 3]);
       game.platforms.push(newP);
       game.entities.push(newP);
     }
@@ -260,7 +278,7 @@ $(function() {
         game.dialogIndex = 0;
         game.restartTimer = 10000;
         game.dialogStartTime = 5000;
-        game.dialog = [["Thanks so much. I'll get that", "battery fixed right up!"], ["Game over", "Press <N> to start over."]];
+        game.dialog = [["Thanks so much. I'll get that", "battery fixed right up!"], ["Professor Power and Powerbot", "created by @HeyChinaski"], ["For Ludum Dare 27", "      Game Over"]];
         game.gameOver = true;
       }
     }
@@ -351,12 +369,19 @@ $(function() {
       context.rect(10, 10, 800, 130);
       context.stroke();
       context.fillRect(10, 10, 800, 130);
-      context.drawImage(profImage, 20, 20);
+
+      context.beginPath();
+      context.lineWidth = 10;
+      context.rect(15, 15, 800, 130);
+      context.stroke();
+      context.fillRect(10, 10, 800, 130);
+
+      context.drawImage(profImage, 20, 30);
 
       context.font = "bold 36px sans";
       context.fillStyle = "#202020";
-      context.fillText(dialog[0], 150, 50);
-      context.fillText(dialog[1], 150, 100);
+      context.fillText(dialog[0], 160, 60);
+      context.fillText(dialog[1], 160, 110);
       context.lineWidth = 1;
       //context.strokeText(dialog[0], 150, 50);
       //context.strokeText(dialog[1], 150, 100);

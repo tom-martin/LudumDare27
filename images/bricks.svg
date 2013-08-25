@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
-   id="svg4039"
-   version="1.1"
+   sodipodi:docname="bricks.svg"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="bricks.svg">
+   version="1.1"
+   id="svg4039"
+   height="1052.3622047"
+   width="744.09448819">
   <defs
      id="defs4041" />
   <sodipodi:namedview
@@ -25,16 +25,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.24748737"
-     inkscape:cx="175.63229"
+     inkscape:cx="149.94387"
      inkscape:cy="342.41415"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1482"
-     inkscape:window-height="916"
-     inkscape:window-x="2413"
-     inkscape:window-y="338"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="2495"
+     inkscape:window-height="1416"
+     inkscape:window-x="1985"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata4044">
     <rdf:RDF>
@@ -43,6 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -368,6 +369,646 @@
        id="rect4640"
        style="fill:#f1e39f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        inkscape:export-filename="/home/tomm/LudumDare27/images/brick.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-1361.4381"
+       x="2085.2131"
+       height="160.00002"
+       width="308.57141"
+       id="rect3064"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#e25a46;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3066"
+       width="308.57141"
+       height="160.00002"
+       x="2395.2131"
+       y="-1357.1523" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#f2b6ad;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3068"
+       width="308.57141"
+       height="160.00002"
+       x="2705.2131"
+       y="-1371.4381" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-1355.7238"
+       x="3015.2131"
+       height="160.00002"
+       width="308.57141"
+       id="rect3070"
+       style="fill:#ee9e92;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#d37f73;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3072"
+       width="308.57141"
+       height="160.00002"
+       x="2160.9275"
+       y="-1185.7238" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-1198.5809"
+       x="2468.0703"
+       height="160.00002"
+       width="308.57141"
+       id="rect3074"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-1198.1425"
+       x="2782.7944"
+       height="174.83727"
+       width="307.69437"
+       id="rect3076"
+       style="fill:#e3614e;fill-opacity:1;stroke:#000000;stroke-width:20.87703896000000015;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3078"
+       width="308.57141"
+       height="160.00002"
+       x="3090.9275"
+       y="-1180.0095" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3080"
+       width="308.57141"
+       height="160.00002"
+       x="2081.1726"
+       y="-1028.0878" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-1023.8021"
+       x="2391.1726"
+       height="160.00002"
+       width="308.57141"
+       id="rect3082"
+       style="fill:#e36350;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-1038.0878"
+       x="2701.1726"
+       height="160.00002"
+       width="308.57141"
+       id="rect3084"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3086"
+       width="308.57141"
+       height="160.00002"
+       x="3011.1726"
+       y="-1022.3735" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-852.37347"
+       x="2156.8867"
+       height="160.00002"
+       width="308.57141"
+       id="rect3088"
+       style="fill:#f4c0b9;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#e98576;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3090"
+       width="308.57141"
+       height="160.00002"
+       x="2464.0295"
+       y="-865.23059" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#f1b2a8;fill-opacity:1;stroke:#000000;stroke-width:20.87703896000000015;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3092"
+       width="307.69437"
+       height="174.83727"
+       x="2778.7539"
+       y="-864.79205" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-846.65918"
+       x="3086.8867"
+       height="160.00002"
+       width="308.57141"
+       id="rect3094"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#efa59a;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3096"
+       width="308.57141"
+       height="160.00002"
+       x="2040.7665"
+       y="-682.6156" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-690.45172"
+       x="2358.8477"
+       height="160.00002"
+       width="308.57141"
+       id="rect3098"
+       style="fill:#e87c6c;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-684.53442"
+       x="2660.7664"
+       height="160.00002"
+       width="308.57141"
+       id="rect3100"
+       style="fill:#e97a69;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#f7d2cd;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3102"
+       width="308.57141"
+       height="160.00002"
+       x="2970.7664"
+       y="-676.90131" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-506.90134"
+       x="2116.4807"
+       height="160.00002"
+       width="308.57141"
+       id="rect3104"
+       style="fill:#f9ddd9;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#e56a58;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3106"
+       width="308.57141"
+       height="160.00002"
+       x="2423.6235"
+       y="-519.75842" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#e15642;fill-opacity:1;stroke:#000000;stroke-width:20.87703896000000015;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3108"
+       width="307.69437"
+       height="174.83727"
+       x="2738.3479"
+       y="-519.31989" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-501.18704"
+       x="3046.4807"
+       height="160.00002"
+       width="308.57141"
+       id="rect3110"
+       style="fill:#efa296;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-349.26523"
+       x="2036.726"
+       height="160.00002"
+       width="308.57141"
+       id="rect3112"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3114"
+       width="308.57141"
+       height="160.00002"
+       x="2346.7258"
+       y="-344.97946" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3116"
+       width="308.57141"
+       height="160.00002"
+       x="2660.7664"
+       y="-339.06223" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-343.55087"
+       x="2966.7258"
+       height="160.00002"
+       width="308.57141"
+       id="rect3118"
+       style="fill:#fbc3b9;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#d33921;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3120"
+       width="308.57141"
+       height="160.00002"
+       x="2112.4402"
+       y="-173.55098" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-186.40804"
+       x="2419.583"
+       height="160.00002"
+       width="308.57141"
+       id="rect3122"
+       style="fill:#e36350;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       y="-185.96956"
+       x="2734.3071"
+       height="174.83727"
+       width="307.69437"
+       id="rect3124"
+       style="fill:#e3604c;fill-opacity:1;stroke:#000000;stroke-width:20.87703896000000015;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="33.32"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick2.png"
+       style="fill:#eb8e80;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3126"
+       width="308.57141"
+       height="160.00002"
+       x="3042.4402"
+       y="-167.83662" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4438"
+       width="308.57141"
+       height="160.00002"
+       x="1693.2739"
+       y="513.40503"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="517.6908"
+       x="2003.2739"
+       height="160.00002"
+       width="308.57141"
+       id="rect4440"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="503.40503"
+       x="2313.2739"
+       height="160.00002"
+       width="308.57141"
+       id="rect4442"
+       style="fill:#b8f1ab;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4444"
+       width="308.57141"
+       height="160.00002"
+       x="2623.2739"
+       y="519.11938"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="689.11938"
+       x="1768.9883"
+       height="160.00002"
+       width="308.57141"
+       id="rect4446"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#4f9e3d;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4448"
+       width="308.57141"
+       height="160.00002"
+       x="2076.1311"
+       y="676.26221"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20.87703896000000015;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4450"
+       width="307.69437"
+       height="174.83727"
+       x="2390.8552"
+       y="676.70068"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="694.83362"
+       x="2698.9883"
+       height="160.00002"
+       width="308.57141"
+       id="rect4452"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="846.75537"
+       x="1689.2334"
+       height="160.00002"
+       width="308.57141"
+       id="rect4454"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#2b8416;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4456"
+       width="308.57141"
+       height="160.00002"
+       x="1999.2334"
+       y="851.04102"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4458"
+       width="308.57141"
+       height="160.00002"
+       x="2309.2334"
+       y="836.75537"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="852.46967"
+       x="2619.2334"
+       height="160.00002"
+       width="308.57141"
+       id="rect4460"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#b7e7ac;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4462"
+       width="308.57141"
+       height="160.00002"
+       x="1764.9475"
+       y="1022.4697"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1009.6125"
+       x="2072.0903"
+       height="160.00002"
+       width="308.57141"
+       id="rect4464"
+       style="fill:#339c1a;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1010.0511"
+       x="2386.8147"
+       height="174.83727"
+       width="307.69437"
+       id="rect4466"
+       style="fill:#b8f1ab;fill-opacity:1;stroke:#000000;stroke-width:20.87703896000000015;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#6ce24f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4468"
+       width="308.57141"
+       height="160.00002"
+       x="2694.9475"
+       y="1028.184"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1192.2275"
+       x="1648.8273"
+       height="160.00002"
+       width="308.57141"
+       id="rect4470"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4472"
+       width="308.57141"
+       height="160.00002"
+       x="1966.9084"
+       y="1184.3915"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4474"
+       width="308.57141"
+       height="160.00002"
+       x="2268.8271"
+       y="1190.3087"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1197.9419"
+       x="2578.8271"
+       height="160.00002"
+       width="308.57141"
+       id="rect4476"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4478"
+       width="308.57141"
+       height="160.00002"
+       x="1724.5415"
+       y="1367.9418"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1355.0847"
+       x="2031.6843"
+       height="160.00002"
+       width="308.57141"
+       id="rect4480"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1355.5233"
+       x="2346.4087"
+       height="174.83727"
+       width="307.69437"
+       id="rect4482"
+       style="fill:#7ee665;fill-opacity:1;stroke:#000000;stroke-width:20.87703896000000015;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4484"
+       width="308.57141"
+       height="160.00002"
+       x="2654.5415"
+       y="1373.6561"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4486"
+       width="308.57141"
+       height="160.00002"
+       x="1644.7867"
+       y="1525.5779"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1529.8636"
+       x="1954.7866"
+       height="160.00002"
+       width="308.57141"
+       id="rect4488"
+       style="fill:#519c3f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1535.7809"
+       x="2268.8271"
+       height="160.00002"
+       width="308.57141"
+       id="rect4490"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4492"
+       width="308.57141"
+       height="160.00002"
+       x="2574.7866"
+       y="1531.2922"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1701.2921"
+       x="1720.501"
+       height="160.00002"
+       width="308.57141"
+       id="rect4494"
+       style="fill:#287915;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4496"
+       width="308.57141"
+       height="160.00002"
+       x="2027.6438"
+       y="1688.4351"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20.87703896000000015;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4498"
+       width="307.69437"
+       height="174.83727"
+       x="2342.3679"
+       y="1688.8735"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
+       inkscape:export-xdpi="33.32"
+       inkscape:export-ydpi="33.32" />
+    <rect
+       y="1707.0065"
+       x="2650.501"
+       height="160.00002"
+       width="308.57141"
+       id="rect4500"
+       style="fill:#3dbc1f;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/brick3.png"
        inkscape:export-xdpi="33.32"
        inkscape:export-ydpi="33.32" />
   </g>
