@@ -170,13 +170,24 @@ $(function() {
     previousTs = nts;
 
     if(game.zoom > game.targetZoom) {
-      game.zoom = Math.max(game.targetZoom, game.zoom - (dt * 0.002));
+      var s = 0.002;
+      if(game.zoom <= 0.5) {
+        s = 0.0005;
+      }
+      game.zoom = Math.max(game.targetZoom, game.zoom - (dt * s));
     } else {
       game.zoom = Math.min(game.targetZoom, game.zoom + (dt * 0.0005));
     }
 
     if(game.restartTimer <= 0 || game.restartTimer > game.restartFudge) {
       game.player.update(dt, keys);
+
+      if(Math.abs(game.player.xVelocity) >= game.player.maxSpeed) {
+        game.targetZoom = 0.4;
+      } else {
+        game.targetZoom = 0.5;
+      }
+
       game.collison.update();
       game.player.applyUpdate();
     }
@@ -197,6 +208,7 @@ $(function() {
 
     if((game.exit.isOpen|| game.player.dead)) {
       game.restartTimer -= dt;
+      game.targetZoom = 2;
 
       if(game.restartTimer <= 0) {
         reset(levels[levelIndex]);
