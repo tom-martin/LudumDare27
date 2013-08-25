@@ -21,8 +21,9 @@ function Platform(left, top, width, height, tile) {
     }
     context.restore();
 
-//    context.rect(left,top,width,height);
-//    context.stroke();
+    context.lineWidth = 20;
+    context.rect(left,top,width,height);
+    context.stroke();
   };
 
   this.bounds = function() {

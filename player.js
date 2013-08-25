@@ -25,7 +25,7 @@ function Player(initX, initY, img, jumpImg) {
     this.nextX = this.x;
     this.nextY = this.y;
 
-    this.fuel -= dt;
+    this.fuel = Math.max(0, this.fuel-dt);
 
     if(keys['left']) {
       this.xVelocity = Math.max(-this.maxSpeed, this.xVelocity - dt * this.xAcceleration);
@@ -76,8 +76,19 @@ function Player(initX, initY, img, jumpImg) {
     }
 
     context.drawImage(image, -(img.width / 2), -(img.height / 2));
-    
+
+    var fuelString = (this.fuel / 1000).toFixed(1);
     context.scale(this.direction, 1);
+    
+    context.font = "bold 72px Courier";
+    //context.fillStyle = "black";
+    //context.fillText(fuelString, -30, -(img.height)+60);
+    context.fillStyle = "white";
+    context.fillText(fuelString, -40, -(img.height)+50);
+    context.lineWidth = 2;
+    context.strokeText(fuelString, -40, -(img.height)+50);
+
+
     context.translate(-this.x, -this.y);
   };
 

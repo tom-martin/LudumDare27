@@ -40,6 +40,8 @@ $(function() {
     jump: false
   };
 
+  var zoom = 0.5;
+
   $document.keydown(function(e) {
     if(e.keyCode==37) {
       keys['left'] = true;
@@ -66,6 +68,9 @@ $(function() {
 
   var $fps = $("#fps");
   var fps = 0;
+
+  var backImage = new Image();
+  backImage.src = "images/back.png";
 
   var playerImage = new Image();
   playerImage.onload = function () {
@@ -124,16 +129,30 @@ $(function() {
     context.fillStyle="#202020";
     context.fillRect(0,0,canvas.width,canvas.height);
 
-    context.fillStyle="#00FF00";
-    context.fillRect(5,5,Math.round(player.fuel/10),20);
-
     var translationX = Math.round(player.x);
     var translationY = Math.round(player.y - 50);
 
     context.translate(Math.round(canvas.width/2),Math.round(canvas.height/2));
-    context.scale(0.5, 0.5);
+    context.scale(zoom, zoom);
+
     context.translate(-translationX,-translationY);
 
+    if(backImage.width > 0) {
+      var initialY = player.y-((canvas.height / 2) / zoom)-backImage.height;
+      var roundedY = Math.floor(initialY / backImage.height)*backImage.height;
+
+      var initialX = player.x-((canvas.width / 2) / zoom)-backImage.width;
+      var roundedX = Math.floor(initialX / backImage.width)*backImage.width;
+      for(var backX = roundedX; backX < roundedX + (canvas.width/zoom)+(2 * backImage.width); backX += backImage.width) {
+        var initY = roundedY;
+        if((backX / backImage.width) % 2 == 0) {
+          initY += (backImage.height / 2);
+        }
+        for(var backY = initY; backY < roundedY + (canvas.height/zoom)+(2 * backImage.height); backY += backImage.height) {
+          context.drawImage(backImage, backX, backY);
+        }
+      }
+    }
 
     for(i in platforms) {
       platforms[i].render(context);
