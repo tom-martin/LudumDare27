@@ -56,13 +56,14 @@
        transform="translate(3.03269,89.90803)"
        inkscape:export-filename="/home/tomm/LudumDare27/images/battery1.png"
        inkscape:export-xdpi="36.585419"
-       inkscape:export-ydpi="36.585419">
+       inkscape:export-ydpi="36.585419"
+       style="stroke:#1b1b1b;stroke-opacity:1">
       <path
          sodipodi:nodetypes="ccsccc"
          inkscape:connector-curvature="0"
          id="path2987"
          d="m 301.62054,470.58929 c 0.51123,95.80423 -0.23438,193.02265 -1,288.1875 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.48661,-14.27016 80.48661,-31.84375 0.57541,-95.036 2.32589,-192.84217 2.32589,-288.1875 z"
-         style="fill:#9c9c9c;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:#9c9c9c;fill-opacity:1;stroke:#1b1b1b;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <path
          d="m 359.13461,452.83664 c 0,17.57359 -37.32288,31.8198 -83.36297,31.8198 -46.0401,0 -83.36297,-14.24621 -83.36297,-31.8198 0,-17.57359 37.32287,-31.81981 83.36297,-31.81981 46.04009,0 83.36297,14.24622 83.36297,31.81981 z"
          sodipodi:ry="31.819805"
@@ -70,12 +71,12 @@
          sodipodi:cy="452.83664"
          sodipodi:cx="275.77164"
          id="path2998"
-         style="fill:#9c9c9c;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#9c9c9c;fill-opacity:1;stroke:#1b1b1b;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          sodipodi:type="arc"
          transform="translate(109.64286,13.214286)" />
     </g>
     <path
-       style="fill:#ccff00;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#ccff00;fill-opacity:1;stroke:#1b1b1b;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 304.65323,650.08656 c 0.51123,95.80423 -0.23438,103.43341 -1,198.59826 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.46875,-14.27016 80.46875,-31.84375 0.57541,-95.036 2.34375,-103.25293 2.34375,-198.59826 m -1.40625,0 c -5.7788,15.42022 -40.50343,27.28125 -82.5,27.28125 -41.99657,0 -76.7212,-11.86103 -82.5,-27.28125"
        id="path3014"
        inkscape:connector-curvature="0"
@@ -86,12 +87,12 @@
     <g
        transform="matrix(0.25419188,0,0,0.09478251,288.98118,486.78661)"
        id="g3025"
-       style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-opacity:1"
+       style="fill:#b4b4b4;fill-opacity:1;stroke:#555555;stroke-opacity:1"
        inkscape:export-filename="/home/tomm/LudumDare27/images/battery1.png"
        inkscape:export-xdpi="36.585419"
        inkscape:export-ydpi="36.585419">
       <path
-         style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-width:32.75267029;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#555555;stroke-width:32.75267028999999752;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 301.62054,470.58929 c 0.51123,95.80423 -0.23438,193.02265 -1,288.1875 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.48661,-14.27016 80.48661,-31.84375 0.57541,-95.036 2.32589,-192.84217 2.32589,-288.1875 z"
          id="path3027"
          inkscape:connector-curvature="0"
@@ -99,7 +100,7 @@
       <path
          transform="translate(109.64286,13.214286)"
          sodipodi:type="arc"
-         style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-width:32.75267029;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#555555;stroke-width:32.75267028999999752;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="path3029"
          sodipodi:cx="275.77164"
          sodipodi:cy="452.83664"
@@ -112,9 +113,10 @@
        inkscape:export-xdpi="36.585419"
        inkscape:export-filename="/home/tomm/LudumDare27/images/battery2.png"
        transform="matrix(0.96592583,0.25881905,-0.25881905,0.96592583,-162.73345,11.139844)"
-       id="g3866">
+       id="g3866"
+       style="stroke:#1b1b1b;stroke-opacity:1">
       <path
-         style="fill:#9c9c9c;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#9c9c9c;fill-opacity:1;stroke:#1b1b1b;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 301.62054,470.58929 c 0.51123,95.80423 -0.23438,193.02265 -1,288.1875 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.48661,-14.27016 80.48661,-31.84375 0.57541,-95.036 2.32589,-192.84217 2.32589,-288.1875 z"
          id="path3868"
          inkscape:connector-curvature="0"
@@ -122,7 +124,7 @@
       <path
          transform="translate(109.64286,13.214286)"
          sodipodi:type="arc"
-         style="fill:#9c9c9c;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#9c9c9c;fill-opacity:1;stroke:#1b1b1b;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          id="path3870"
          sodipodi:cx="275.77164"
          sodipodi:cy="452.83664"
@@ -138,12 +140,12 @@
        inkscape:connector-curvature="0"
        id="path3872"
        d="m -16.375254,630.29589 c -24.302149,92.6721 -26.99693,99.84834 -52.366938,191.57237 -4.54838,16.97479 28.902126,40.71138 74.7071113,52.98479 45.8049847,12.27341 81.4202327,7.04293 85.9686127,-9.93186 25.152928,-91.6488 28.987718,-99.12806 53.664898,-191.22458 m -1.35833,-0.36396 c -9.57294,13.39912 -46.184217,15.8686 -86.749788,4.99909 -40.565572,-10.86951 -71.037128,-31.31378 -72.627974,-47.70423"
-       style="fill:#ccff00;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:#ccff00;fill-opacity:1;stroke:#1b1b1b;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <g
        inkscape:export-ydpi="36.585419"
        inkscape:export-xdpi="36.585419"
        inkscape:export-filename="/home/tomm/LudumDare27/images/battery2.png"
-       style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-opacity:1"
+       style="fill:#b4b4b4;fill-opacity:1;stroke:#555555;stroke-opacity:1"
        id="g3874"
        transform="matrix(0.2455305,0.0657897,-0.02453152,0.09155287,10.751845,468.50403)">
       <path
@@ -151,7 +153,7 @@
          inkscape:connector-curvature="0"
          id="path3876"
          d="m 301.62054,470.58929 c 0.51123,95.80423 -0.23438,193.02265 -1,288.1875 0,17.57359 38.45419,31.84375 85.875,31.84375 47.42081,0 80.48661,-14.27016 80.48661,-31.84375 0.57541,-95.036 2.32589,-192.84217 2.32589,-288.1875 z"
-         style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-width:32.75267029;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#555555;stroke-width:32.75267028999999752;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <path
          d="m 359.13461,452.83664 c 0,17.57359 -37.32288,31.8198 -83.36297,31.8198 -46.0401,0 -83.36297,-14.24621 -83.36297,-31.8198 0,-17.57359 37.32287,-31.81981 83.36297,-31.81981 46.04009,0 83.36297,14.24622 83.36297,31.81981 z"
          sodipodi:ry="31.819805"
@@ -159,7 +161,7 @@
          sodipodi:cy="452.83664"
          sodipodi:cx="275.77164"
          id="path3878"
-         style="fill:#b4b4b4;fill-opacity:1;stroke:#d5d5d5;stroke-width:32.75267029;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#b4b4b4;fill-opacity:1;stroke:#555555;stroke-width:32.75267028999999752;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          sodipodi:type="arc"
          transform="translate(109.64286,13.214286)" />
     </g>
