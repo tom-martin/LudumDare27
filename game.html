@@ -89,11 +89,11 @@ $(function() {
   var $fps = $("#fps");
   var fps = 0;
 
-  var jumpSounds = [new Audio("sounds/Jump1.wav"), new Audio("sounds/Jump2.wav"), new Audio("sounds/Jump3.wav")];
-  var deadSounds = [new Audio("sounds/Dead.wav")];
-  var batterySounds = [new Audio("sounds/Battery.wav")];
-  var tiltSounds = [new Audio("sounds/Tilt1.wav"), new Audio("sounds/Tilt2.wav")];
-  var finishSound = new Audio("sounds/Finish.wav");
+  var jumpSounds = [new Audio("sounds/Jump1.ogg"), new Audio("sounds/Jump2.ogg"), new Audio("sounds/Jump3.ogg")];
+  var deadSounds = [new Audio("sounds/Dead.ogg")];
+  var batterySounds = [new Audio("sounds/Battery.ogg")];
+  var tiltSounds = [new Audio("sounds/Tilt1.ogg"), new Audio("sounds/Tilt2.ogg")];
+  var finishSound = new Audio("sounds/Finish.ogg");
 
   var backImage = new Image();
   backImage.src = "images/back.png";
@@ -213,9 +213,9 @@ $(function() {
     if(previousTs > -1) {
       dt = nts - previousTs;
 
-      var thisFrameFPS = 1000 / (dt);
-      fps += (thisFrameFPS - fps) / 50;
-      $fps.text(""+fps);
+      // var thisFrameFPS = 1000 / (dt);
+      // fps += (thisFrameFPS - fps) / 50;
+      // $fps.text(""+fps);
     }
     previousTs = nts;
 

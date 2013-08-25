@@ -31,7 +31,6 @@ function Battery(x, y, battery1Image, battery2Image) {
       context.translate(-x, -y);
     } else if(this.collectedTime > 0) {
       var timeElapsed = (Date.now() - this.collectedTime);
-      console.log(timeElapsed);
       if(timeElapsed < 1000) {
         context.font = "bold 72px Courier";
         context.fillStyle = "white";
