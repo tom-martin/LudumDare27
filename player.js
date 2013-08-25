@@ -1,4 +1,4 @@
-function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, cloudImg, jumpSounds, deadSounds, batterySounds, tiltSounds) {
+function Player(initX, initY, fuelEnabled, img, img2, jumpImg, deadImg, cloudImg, jumpSounds, deadSounds, batterySounds, tiltSounds) {
   this.x = initX;
   this.y = initY;
 
@@ -110,6 +110,11 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, cloudImg, jump
     context.rotate(-rotation);
 
     var image = img;
+    if(Date.now() % 1600 > 1200) {
+      image = img2;
+    }
+
+
     if(this.jumping) {
       image = jumpImg;
     }

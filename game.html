@@ -124,6 +124,9 @@ $(function() {
   var playerImage = new Image();
   playerImage.src = "images/robot.png";
 
+  var playerImage2 = new Image();
+  playerImage2.src = "images/robot2.png";
+
   var game = {};
   var levelIndex = 0;
 
@@ -168,7 +171,7 @@ $(function() {
     game.exit = new Door(level.exit[0], level.exit[1], door1Image, door2Image, doorOpenImage);
     game.entities.push(game.exit);
 
-    game.player = new Player(level.entrance[0], level.entrance[1], level.fuelEnabled, playerImage, jumpImage, robotDeadImage, cloudImage, jumpSounds, deadSounds, batterySounds, tiltSounds);
+    game.player = new Player(level.entrance[0], level.entrance[1], level.fuelEnabled, playerImage, playerImage2, jumpImage, robotDeadImage, cloudImage, jumpSounds, deadSounds, batterySounds, tiltSounds);
     
     game.collison = new CollisionManager(game.player, game.entities);
 
