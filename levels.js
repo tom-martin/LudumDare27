@@ -1,4 +1,5 @@
 var levels = [
-  //{"platforms":[[-576,-256,384,832],[-192,320,1600,256],[1408,-256,384,832]],"batteries":[],"spikes":[],"entrance":[-32,200],"exit":[1228,204]},
-  {"platforms":[[-1088,320,14592,768]],"batteries":[],"entrance":[-716,212],"exit":[13176,200]},
-  {"platforms":[[-576,-256,384,832],[-192,320,1600,256],[1408,-256,384,832]],"batteries":[],"spikes":[[320,-832,704,1152]],"entrance":[-32,200],"exit":[1228,204]}];
+{"platforms":[[-192,128,2112,960],[-1472,-1472,1280,2560],[-192,-1472,2112,640],[1920,-1472,1216,2560]],"batteries":[],"spikes":[],"entrance":[-32,22],"exit":[1640,24],"fuelEnabled":false,"dialog":[["Hello, I'm Prof Power","-Press <N> to skip-"],["Looks like my new creation","is ready for testing"],["Use the left and right cursor","keys to move."]]},
+{"platforms":[[-192,128,2112,960],[448,-128,1472,256],[-1728,-1792,1536,2880],[-192,-1792,3456,320],[1920,-1472,1344,2560]],"batteries":[],"spikes":[],"entrance":[-32,22],"exit":[1760,-240],"fuelEnabled":false,"dialog":[["Use the spacebar to jump.",""]]},
+{"platforms":[[-192,128,768,704],[576,320,256,512],[832,128,960,704],[-1600,-1216,1408,2048],[1792,-1216,1216,2048],[-192,-1216,1984,192]],"spikes":[[576,128,256,192]],"entrance":[-32,22],"exit":[1640,24],"fuelEnabled":false,"dialog":[["Who left those spikes"," there!!?!"], ["Working in a lab can be", "dangerous"]]},
+{"platforms":[[-192,128,2112,960],[-1664,-1600,1472,2688],[-192,-1600,2112,512],[1920,-1600,1408,2688]],"batteries":[[826,-14]],"spikes":[],"entrance":[-32,22],"exit":[1640,24],"fuelEnabled":true,"dialog":[["Oh no! Looks like the battery","isn't functioning correctly"],["There are only 10 seconds of","power!"],["Better bring it back to me.","I'll fix it up."],["Pick up the cells to recharge",""]]}];

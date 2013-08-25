@@ -1,4 +1,4 @@
-function Player(initX, initY, img, jumpImg, deadImg) {
+function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
   this.x = initX;
   this.y = initY;
 
@@ -9,7 +9,7 @@ function Player(initX, initY, img, jumpImg, deadImg) {
 
   this.direction = 1;
   this.maxSpeed = 2;
-  this.xAcceleration = 0.004;
+  this.xAcceleration = 0.008;
   this.xVelocity = 0;
 
   this.onGround = false;
@@ -29,7 +29,7 @@ function Player(initX, initY, img, jumpImg, deadImg) {
 
     this.fuel = Math.max(0, this.fuel-dt);
 
-    if(this.fuel == 0) {
+    if(this.fuel == 0 && fuelEnabled) {
       this.dead = true;
     }
 
@@ -56,6 +56,10 @@ function Player(initX, initY, img, jumpImg, deadImg) {
     }
 
     this.yVelocity = Math.min(this.maxYSpeed, this.yVelocity + (dt * this.gravityAcceleration));
+
+    if(this.dead) {
+      this.xVelocity *= 0.1;
+    }
 
     this.nextX += (this.xVelocity * dt);
     this.nextY += (this.yVelocity * dt);
@@ -87,17 +91,17 @@ function Player(initX, initY, img, jumpImg, deadImg) {
     }
 
     context.drawImage(image, -(img.width / 2), -(img.height / 2));
-
-    var fuelString = (this.fuel / 1000).toFixed(1);
     context.scale(this.direction, 1);
-    
-    context.font = "bold 72px Courier";
-    //context.fillStyle = "black";
-    //context.fillText(fuelString, -30, -(img.height)+60);
-    context.fillStyle = "white";
-    context.fillText(fuelString, -40, -(img.height)+50);
-    context.lineWidth = 2;
-    context.strokeText(fuelString, -40, -(img.height)+50);
+
+    if(fuelEnabled) {
+      var fuelString = (this.fuel / 1000).toFixed(1);
+      
+      context.font = "bold 72px Courier";
+      context.fillStyle = "white";
+      context.fillText(fuelString, -40, -(img.height)+50);
+      context.lineWidth = 2;
+      context.strokeText(fuelString, -40, -(img.height)+50);
+    }
 
 
     context.translate(-this.x, -this.y);

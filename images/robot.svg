@@ -28,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="399.36373"
+     inkscape:cx="335.89015"
      inkscape:cy="621.73368"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -252,5 +252,112 @@
        inkscape:export-filename="/home/tomm/LudumDare27/images/robotjump.png"
        inkscape:export-xdpi="37.514816"
        inkscape:export-ydpi="37.514816" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m -354.71264,478.41186 c 0,0 -88.01875,26.81471 -155.45768,125.52036 l -55.60191,-51.92969 c 67.43894,-98.70565 155.45768,-125.52036 155.45768,-125.52036 z"
+       id="path3807-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
+    <path
+       style="fill:#4d4d4d;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:20, 20;stroke-dashoffset:0;marker-start:none"
+       d="m -569.31602,554.9703 c -27.61373,-9.46921 -52.875,23.68281 -52.875,52.875 0,29.19219 23.68281,52.84375 52.875,52.84375 l 150,0 c 14.99059,0 27.125,-12.13441 27.125,-27.125 0,-14.99059 -12.94497,-22.29368 -27.125,-27.15625 z"
+       id="path2985-39"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
+    <path
+       transform="translate(-845.03476,-33.092205)"
+       sodipodi:type="arc"
+       style="fill:#ffffff;stroke:#000000;stroke-width:20;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3799-9"
+       sodipodi:cx="278.57144"
+       sodipodi:cy="640.93359"
+       sodipodi:rx="12.857142"
+       sodipodi:ry="12.857142"
+       d="m 291.42858,640.93359 a 12.857142,12.857142 0 1 1 -25.71428,0 12.857142,12.857142 0 1 1 25.71428,0 z"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
+    <path
+       transform="translate(-845.03476,-33.092205)"
+       sodipodi:type="arc"
+       style="fill:#ffffff;stroke:#000000;stroke-width:20;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3803-2"
+       sodipodi:cx="389.64285"
+       sodipodi:cy="658.79077"
+       sodipodi:rx="4.6428571"
+       sodipodi:ry="5"
+       d="m 394.28571,658.79077 a 4.6428571,5 0 1 1 -9.28571,0 4.6428571,5 0 1 1 9.28571,0 z"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
+       d="m -470.04597,447.30658 c 14.36665,-10.42753 38.88074,-1.1522 54.75375,20.71703 15.87302,21.86922 17.09417,48.05091 2.72752,58.47845"
+       id="path3811-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
+    <path
+       sodipodi:nodetypes="csc"
+       inkscape:connector-curvature="0"
+       id="path3825-4"
+       d="m -506.12968,473.27766 c 14.36665,-10.42753 38.88074,-1.1522 54.75376,20.71703 15.87301,21.86922 17.09416,48.05091 2.72752,58.47845"
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
+       d="m -543.02332,506.23685 c 14.36665,-10.42752 38.88074,-1.15219 54.75376,20.71704 15.87301,21.86922 17.09416,48.05091 2.72752,58.47845"
+       id="path3827-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3831-0"
+       sodipodi:cx="353.57144"
+       sodipodi:cy="368.79074"
+       sodipodi:rx="62.857143"
+       sodipodi:ry="62.857143"
+       d="m 416.42859,368.79074 a 62.857143,62.857143 0 1 1 -125.71429,0 62.857143,62.857143 0 1 1 125.71429,0 z"
+       transform="matrix(1.3823529,0,0,1.3823529,-801.7713,-59.953193)"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#800000;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3833-7"
+       sodipodi:cx="452.5"
+       sodipodi:cy="357.00504"
+       sodipodi:rx="18.214285"
+       sodipodi:ry="18.214285"
+       d="m 470.71428,357.00504 a 18.214285,18.214285 0 1 1 -36.42856,0 18.214285,18.214285 0 1 1 36.42856,0 z"
+       transform="translate(-731.75553,111.35962)"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;opacity:0"
+       id="rect5098"
+       width="78.791901"
+       height="417.19299"
+       x="-532.3504"
+       y="242.21985"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/robotdead.png"
+       inkscape:export-xdpi="37.549999"
+       inkscape:export-ydpi="37.549999" />
   </g>
 </svg>
