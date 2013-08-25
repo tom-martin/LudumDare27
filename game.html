@@ -22,8 +22,8 @@ var requestAnimFrame = (function(){
 
 </style>
   </head>
-  <body>
-    <div style="margin: auto;width: 1280px">
+  <body style="background-color: #f9f3d4;">
+    <div style="margin: auto;width: 1280px;">
       <canvas id="gameCanvas" width="1280" height="600">Fallback content, in case the browser does not support Canvas.</canvas>
       <p id="fps">0<p>
     </div>
@@ -236,7 +236,7 @@ $(function() {
         game.dialogIndex = 0;
         game.restartTimer = 10000;
         game.dialogStartTime = 5000;
-        game.dialog = [["Thanks so much.", "I'll fix it right up!"], ["Game over", "Press <N> to start over."]];
+        game.dialog = [["Thanks so much. I'll get that", "battery fixed right up!"], ["Game over", "Press <N> to start over."]];
       }
     }
 
@@ -328,12 +328,13 @@ $(function() {
       context.fillRect(10, 10, 800, 130);
       context.drawImage(profImage, 20, 20);
 
-      context.font = "bold 36px Courier";
+      context.font = "bold 36px sans";
+      context.fillStyle = "#202020";
       context.fillText(dialog[0], 150, 50);
-      context.fillText(dialog[1], 150, 50);
+      context.fillText(dialog[1], 150, 100);
       context.lineWidth = 1;
-      context.strokeText(dialog[0], 150, 50);
-      context.strokeText(dialog[1], 150, 100);
+      //context.strokeText(dialog[0], 150, 50);
+      //context.strokeText(dialog[1], 150, 100);
     }
 
     requestAnimFrame(render);
