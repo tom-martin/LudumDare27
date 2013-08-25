@@ -1,4 +1,4 @@
-function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
+function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, jumpSounds, deadSounds, batterySounds) {
   this.x = initX;
   this.y = initY;
 
@@ -22,6 +22,7 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
   this.jumping = false;
 
   this.dead = false;
+  this.rotateTime = 0;
 
   this.update = function(dt, keys) {
     this.nextX = this.x;
@@ -31,6 +32,7 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
 
     if(this.fuel == 0 && fuelEnabled) {
       this.dead = true;
+      deadSounds[Math.floor(Math.random()*deadSounds.length)].play();
     }
 
     if(keys['left']) {
@@ -45,10 +47,19 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
       }
     }
 
+    if(this.xVelocity != 0 && ((this.xVelocity > 0) != (this.direction > 0))) {
+      this.rotateTime = 300;
+    }
+    this.rotateTime = Math.max(0, this.rotateTime - dt);
+
     if(keys['jump'] && this.onGround) {
       this.yVelocity = this.jumpImpulse;
       this.onGround = false;
-      this.jumping = true;
+
+      if(!this.jumping) {
+        this.jumping = true;
+        jumpSounds[Math.floor(Math.random()*jumpSounds.length)].play();
+      }
     }
 
     if(!this.onGround && !keys['jump'] && this.yVelocity > (this.jumpImpulse * 0.75)) {
@@ -81,6 +92,10 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
     context.translate(this.x, this.y);
     context.scale(this.direction, 1);
 
+    if(this.rotateTime > 0) {
+      context.rotate(-0.5);
+    }
+
     var image = img;
     if(this.jumping) {
       image = jumpImg;
@@ -91,6 +106,18 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
     }
 
     context.drawImage(image, -(img.width / 2), -(img.height / 2));
+
+    var rotation = 0;
+
+    if(this.rotateTime > 200) {
+      rotation = 0.3;
+    } else if(this.rotateTime > 100) {
+      rotation = 0.5;
+    } else if(this.rotateTime > 0) {
+      rotation = 0.3;
+    }
+    context.rotate(rotation);
+
     context.scale(this.direction, 1);
 
     if(fuelEnabled) {
@@ -151,6 +178,7 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
     } else if(other.constructor.name == "Battery") {
       if(!other.isCollected) {
         other.collected();
+        batterySounds[Math.floor(Math.random()*batterySounds.length)].play();
         this.fuel = Math.min(10000, this.fuel + 1000);
       }
     } else if(other.constructor.name == "Door") {
@@ -159,6 +187,7 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg) {
       }
     } else if(other.constructor.name == "Spike") {
       this.dead = true;
+      deadSounds[Math.floor(Math.random()*deadSounds.length)].play();
       this.xVelocity = 0;
     }
   };

@@ -76,14 +76,13 @@ $(function() {
   var $fps = $("#fps");
   var fps = 0;
 
+  var jumpSounds = [new Audio("sounds/Jump1.wav"), new Audio("sounds/Jump2.wav"), new Audio("sounds/Jump3.wav")];
+  var deadSounds = [new Audio("sounds/Dead.wav")];
+  var batterySounds = [new Audio("sounds/Battery.wav")];
+  var finishSound = new Audio("sounds/Finish.wav");
+
   var backImage = new Image();
   backImage.src = "images/back.png";
-
-  var playerImage = new Image();
-  playerImage.onload = function () {
-    render();
-  };
-  playerImage.src = "images/robot.png";
 
   var jumpImage = new Image();
   jumpImage.src = "images/robotjump.png";
@@ -114,6 +113,9 @@ $(function() {
 
   var profImage = new Image();
   profImage.src = "images/prof.png";
+
+  var playerImage = new Image();
+  playerImage.src = "images/robot.png";
 
   var game = {};
   var levelIndex = 0;
@@ -158,7 +160,7 @@ $(function() {
     game.exit = new Door(level.exit[0], level.exit[1], door1Image, door2Image, doorOpenImage);
     game.entities.push(game.exit);
 
-    game.player = new Player(level.entrance[0], level.entrance[1], level.fuelEnabled, playerImage, jumpImage, robotDeadImage);
+    game.player = new Player(level.entrance[0], level.entrance[1], level.fuelEnabled, playerImage, jumpImage, robotDeadImage, jumpSounds, deadSounds, batterySounds);
     
     game.collison = new CollisionManager(game.player, game.entities);
 
@@ -171,6 +173,10 @@ $(function() {
   game.zoom = 1.5;
 
   var previousTs = -1;
+
+  playerImage.onload = function () {
+    render();
+  };
 
   function render() {
     var nts = Date.now();
@@ -217,17 +223,19 @@ $(function() {
     if(!dialogOn && (game.restartTimer <= 0 || game.restartTimer > game.restartFudge)) {
       game.player.update(dt, keys);
 
-      if(Math.abs(game.player.xVelocity) >= game.player.maxSpeed) {
-        game.targetZoom = 0.4;
-      } else {
-        game.targetZoom = 0.5;
-      }
+      // if(Math.abs(game.player.xVelocity) >= game.player.maxSpeed) {
+      //   game.targetZoom = 0.4;
+      // } else {
+      //   game.targetZoom = 0.5;
+      // }
 
       game.collison.update();
       game.player.applyUpdate();
     }
 
     if(game.exit.isOpen && game.restartTimer <= 0) {
+      finishSound.play();
+
       game.restartTimer = game.restartStart;
       game.targetZoom = 2;
       levelIndex ++;
@@ -245,7 +253,7 @@ $(function() {
       game.targetZoom = 2;
     }
 
-    if((game.exit.isOpen|| game.player.dead)) {
+    if((game.exit.isOpen || game.player.dead)) {
       game.restartTimer -= dt;
       game.targetZoom = 2;
 
