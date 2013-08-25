@@ -24,6 +24,7 @@ var requestAnimFrame = (function(){
   </head>
   <body>
     <canvas id="gameCanvas" width="1440" height="900">Fallback content, in case the browser does not support Canvas.</canvas>
+    <p id="fps">0<p>
     <script src="player.js"></script>
     <script src="platform.js"></script>
     <script src="collision.js"></script>
@@ -63,6 +64,9 @@ $(function() {
   canvas = $("canvas").get(0);
   context = canvas.getContext('2d');
 
+  var $fps = $("#fps");
+  var fps = 0;
+
   var playerImage = new Image();
   playerImage.onload = function () {
     render();
@@ -100,6 +104,10 @@ $(function() {
     var dt = 0
     if(previousTs > -1) {
       dt = nts - previousTs;
+
+      var thisFrameFPS = 1000 / (dt);
+      fps += (thisFrameFPS - fps) / 50;
+      $fps.text(""+fps);
     }
     previousTs = nts;
 
