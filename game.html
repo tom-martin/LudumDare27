@@ -42,7 +42,8 @@ $(function() {
     left: false,
     right: false,
     jump: false,
-    next: false
+    next: false,
+    music: false
   };
 
   $document.keydown(function(e) {
@@ -59,6 +60,8 @@ $(function() {
       keys['next'] = true;
 
       e.preventDefault();
+    } else if(e.keyCode==77) {
+      keys['music'] = true;
     }
   });
 
@@ -76,6 +79,8 @@ $(function() {
       keys['next'] = false;
 
       e.preventDefault();
+    } else if(e.keyCode==77) {
+      keys['music'] = false;
     }
   });
 
@@ -94,6 +99,13 @@ $(function() {
   var batterySounds = [new Audio("sounds/Battery.ogg")];
   var tiltSounds = [new Audio("sounds/Tilt1.ogg"), new Audio("sounds/Tilt2.ogg")];
   var finishSound = new Audio("sounds/Finish.ogg");
+
+  var music = new Audio("sounds/Music.ogg");
+  music.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+  }, false);
+  music.play();
 
   var backImage = new Image();
   backImage.src = "images/back.png";
@@ -218,6 +230,16 @@ $(function() {
       // $fps.text(""+fps);
     }
     previousTs = nts;
+
+    if(keys['music']) {
+      if(music.currentTime > 0) {
+        music.currentTime = 0;
+        music.pause();
+      } else {
+        music.play();
+      }
+      keys['music'] = false;
+    }
 
     
     var dialogOn = game.dialogIndex < game.dialog.length;
