@@ -79,6 +79,7 @@ $(function() {
   var jumpSounds = [new Audio("sounds/Jump1.wav"), new Audio("sounds/Jump2.wav"), new Audio("sounds/Jump3.wav")];
   var deadSounds = [new Audio("sounds/Dead.wav")];
   var batterySounds = [new Audio("sounds/Battery.wav")];
+  var tiltSounds = [new Audio("sounds/Tilt1.wav"), new Audio("sounds/Tilt2.wav")];
   var finishSound = new Audio("sounds/Finish.wav");
 
   var backImage = new Image();
@@ -114,6 +115,9 @@ $(function() {
   var profImage = new Image();
   profImage.src = "images/prof.png";
 
+  var cloudImage = new Image();
+  cloudImage.src = "images/cloud1.png";
+
   var playerImage = new Image();
   playerImage.src = "images/robot.png";
 
@@ -128,6 +132,7 @@ $(function() {
     game.batteries = [];
     game.dialogIndex = 0;
     game.dialog = level.dialog;
+    game.gameOver = false;
 
     game.dialogStartTime = 5000;
 
@@ -160,7 +165,7 @@ $(function() {
     game.exit = new Door(level.exit[0], level.exit[1], door1Image, door2Image, doorOpenImage);
     game.entities.push(game.exit);
 
-    game.player = new Player(level.entrance[0], level.entrance[1], level.fuelEnabled, playerImage, jumpImage, robotDeadImage, jumpSounds, deadSounds, batterySounds);
+    game.player = new Player(level.entrance[0], level.entrance[1], level.fuelEnabled, playerImage, jumpImage, robotDeadImage, cloudImage, jumpSounds, deadSounds, batterySounds, tiltSounds);
     
     game.collison = new CollisionManager(game.player, game.entities);
 
@@ -204,6 +209,11 @@ $(function() {
         game.dialogStartTime = 5000;
       }
       dialogOn = game.dialogIndex < game.dialog.length;
+
+      if(!dialogOn && game.gameOver) {
+        levelIndex = 0;
+        reset(levels[levelIndex]);
+      }
     }
 
     if(game.zoom > game.targetZoom) {
@@ -245,6 +255,7 @@ $(function() {
         game.restartTimer = 10000;
         game.dialogStartTime = 5000;
         game.dialog = [["Thanks so much. I'll get that", "battery fixed right up!"], ["Game over", "Press <N> to start over."]];
+        game.gameOver = true;
       }
     }
 

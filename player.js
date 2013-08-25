@@ -1,4 +1,4 @@
-function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, jumpSounds, deadSounds, batterySounds) {
+function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, cloudImg, jumpSounds, deadSounds, batterySounds, tiltSounds) {
   this.x = initX;
   this.y = initY;
 
@@ -22,7 +22,7 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, jumpSounds, de
   this.jumping = false;
 
   this.dead = false;
-  this.rotateTime = 0;
+  this.tiltTime = 0;
 
   this.update = function(dt, keys) {
     this.nextX = this.x;
@@ -47,10 +47,14 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, jumpSounds, de
       }
     }
 
-    if(this.xVelocity != 0 && ((this.xVelocity > 0) != (this.direction > 0))) {
-      this.rotateTime = 300;
+    if(this.tiltTime == 0 &&
+       this.onGround && 
+       this.xVelocity != 0 && 
+       ((this.xVelocity > 0) != (this.direction > 0))) {
+      tiltSounds[Math.floor(Math.random()*tiltSounds.length)].play();
+      this.tiltTime = 300;
     }
-    this.rotateTime = Math.max(0, this.rotateTime - dt);
+    this.tiltTime = Math.max(0, this.tiltTime - dt);
 
     if(keys['jump'] && this.onGround) {
       this.yVelocity = this.jumpImpulse;
@@ -58,6 +62,7 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, jumpSounds, de
 
       if(!this.jumping) {
         this.jumping = true;
+        this.tiltTime = 0;
         jumpSounds[Math.floor(Math.random()*jumpSounds.length)].play();
       }
     }
@@ -92,9 +97,17 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, jumpSounds, de
     context.translate(this.x, this.y);
     context.scale(this.direction, 1);
 
-    if(this.rotateTime > 0) {
-      context.rotate(-0.5);
+    var rotation = 0;
+
+    if(this.tiltTime > 275) {
+      rotation = 0.3;
+    } else if(this.tiltTime > 100) {
+      rotation = 0.5;
+    } else if(this.tiltTime > 0) {
+      rotation = 0.3;
     }
+
+    context.rotate(-rotation);
 
     var image = img;
     if(this.jumping) {
@@ -107,15 +120,10 @@ function Player(initX, initY, fuelEnabled, img, jumpImg, deadImg, jumpSounds, de
 
     context.drawImage(image, -(img.width / 2), -(img.height / 2));
 
-    var rotation = 0;
-
-    if(this.rotateTime > 200) {
-      rotation = 0.3;
-    } else if(this.rotateTime > 100) {
-      rotation = 0.5;
-    } else if(this.rotateTime > 0) {
-      rotation = 0.3;
+    if(this.tiltTime > 0) {
+      context.drawImage(cloudImg, -60-((img.width + cloudImg.width) / 2), 75-(img.height / 2));
     }
+
     context.rotate(rotation);
 
     context.scale(this.direction, 1);
