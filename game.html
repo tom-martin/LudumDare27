@@ -24,7 +24,7 @@ var requestAnimFrame = (function(){
   </head>
   <body style="background-color: #f9f3d4;">
     <div style="margin: auto;width: 1280px;">
-      <canvas id="gameCanvas" width="1280" height="600">Fallback content, in case the browser does not support Canvas.</canvas>
+      <canvas id="gameCanvas" width="1440" height="800">Fallback content, in case the browser does not support Canvas.</canvas>
       <p id="fps">0<p>
     </div>
     <script src="player.js"></script>
@@ -72,6 +72,9 @@ $(function() {
   var $canvas = $("canvas");
   canvas = $("canvas").get(0);
   context = canvas.getContext('2d');
+
+  $canvas.width(Math.min($canvas.width(), $(window).width() - 200));
+  $canvas.height(Math.min($canvas.height(), $(window).height() - 50));
 
   var $fps = $("#fps");
   var fps = 0;
