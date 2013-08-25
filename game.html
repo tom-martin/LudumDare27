@@ -42,8 +42,6 @@ $(function() {
     jump: false
   };
 
-  var zoom = 0.5;
-
   $document.keydown(function(e) {
     if(e.keyCode==37) {
       keys['left'] = true;
@@ -104,43 +102,58 @@ $(function() {
   var spikeImage = new Image();
   spikeImage.src = "images/spike.png";
 
-  var platforms = [];
-  var spikes = [];
-  var entities = [];
-  var batteries = [];
+  var robotDeadImage = new Image();
+  robotDeadImage.src = "images/robotdead.png";
 
-  for(i in level1.platforms) {
-    var p = level1.platforms[i];
-    var newP = new Platform(p[0], p[1], p[2], p[3], platformImage);
-    platforms.push(newP);
-    entities.push(newP);
-  }
+  var game = {};
+  var levelIndex = 0;
 
-  for(i in level1.spikes) {
-    var s = level1.spikes[i];
-    var newS = new Spike(s[0], s[1], s[2], s[3], spikeImage);
-    spikes.push(newS);
-    entities.push(newS);
-  }
+  function reset(level) {
+    game.zoom = 2;
+    game.targetZoom = 0.5;
+    game.platforms = [];
+    game.spikes = [];
+    game.entities = [];
+    game.batteries = [];
 
-  for(i in level1.batteries) {
-    var b = level1.batteries[i];
-    var newB = new Battery(b[0], b[1], battery1Image, battery2Image);
-    batteries.push(newB);
-    entities.push(newB);
-  }
+    game.restartTimer = 0;
 
-  var entrance = new Door(level1.entrance[0], level1.entrance[1], door1Image, door2Image, doorOpenImage);
-  entrance.open();
+    for(i in level.platforms) {
+      var p = level.platforms[i];
+      var newP = new Platform(p[0], p[1], p[2], p[3], platformImage);
+      game.platforms.push(newP);
+      game.entities.push(newP);
+    }
 
-  var exit = new Door(level1.exit[0], level1.exit[1], door1Image, door2Image, doorOpenImage);
-  entities.push(exit);
+    for(i in level.spikes) {
+      var s = level.spikes[i];
+      var newS = new Spike(s[0], s[1], s[2], s[3], spikeImage);
+      game.spikes.push(newS);
+      game.entities.push(newS);
+    }
 
-  var player = new Player(level1.entrance[0], level1.entrance[1], playerImage, jumpImage);
-  
-  var collison = new CollisionManager(player, entities);
+    for(i in level.batteries) {
+      var b = level.batteries[i];
+      var newB = new Battery(b[0], b[1], battery1Image, battery2Image);
+      game.batteries.push(newB);
+      game.entities.push(newB);
+    }
 
-  var spike = new Spike(0, -200, 800, 200, spikeImage);
+    game.entrance = new Door(level.entrance[0], level.entrance[1], door1Image, door2Image, doorOpenImage);
+    game.entrance.open();
+
+    game.exit = new Door(level.exit[0], level.exit[1], door1Image, door2Image, doorOpenImage);
+    game.entities.push(game.exit);
+
+    game.player = new Player(level.entrance[0], level.entrance[1], playerImage, jumpImage, robotDeadImage);
+    
+    game.collison = new CollisionManager(game.player, game.entities);
+
+    game.restartStart = Math.max(2000, (100) * levels.length - levelIndex);
+    game.restartFudge = game.restartStart - 200;
+  };
+
+  reset(levels[0]);
 
   var previousTs = -1;
 
@@ -156,32 +169,61 @@ $(function() {
     }
     previousTs = nts;
 
-    // if(player.fuel > 0) {
-      player.update(dt, keys);
-      collison.update();
-      player.applyUpdate();
+    if(game.zoom > game.targetZoom) {
+      game.zoom = Math.max(game.targetZoom, game.zoom - (dt * 0.002));
+    } else {
+      game.zoom = Math.min(game.targetZoom, game.zoom + (dt * 0.0005));
+    }
+
+    if(game.restartTimer <= 0 || game.restartTimer > game.restartFudge) {
+      game.player.update(dt, keys);
+      game.collison.update();
+      game.player.applyUpdate();
+    }
+
+    if(game.exit.isOpen && game.restartTimer <= 0) {
+      game.restartTimer = game.restartStart;
+      game.targetZoom = 2;
+      levelIndex ++;
+      if(levelIndex >= levels.length) {
+        levelIndex = 0;
+      }
+    }
+
+    if(game.player.dead && game.restartTimer <= 0) {
+      game.restartTimer = game.restartStart;
+      game.targetZoom = 2;
+    }
+
+    if((game.exit.isOpen|| game.player.dead)) {
+      game.restartTimer -= dt;
+
+      if(game.restartTimer <= 0) {
+        reset(levels[levelIndex]);
+      }
+    }
     // }
 
     canvas.width = canvas.width;
     context.fillStyle="#202020";
     context.fillRect(0,0,canvas.width,canvas.height);
 
-    var translationX = Math.round(player.x);
-    var translationY = Math.round(player.y - 50);
+    var translationX = Math.round(game.player.x);
+    var translationY = Math.round(game.player.y - 50);
 
     context.translate(Math.round(canvas.width/2),Math.round(canvas.height/2));
 
 
-    var backZoom = zoom / 2;
+    var backZoom = game.zoom / 2;
     context.scale(backZoom, backZoom);
 
     context.translate(-translationX,-translationY);
 
     if(backImage.width > 0) {
-      var initialY = player.y-((canvas.height / 2) / backZoom)-backImage.height;
+      var initialY = game.player.y-((canvas.height / 2) / backZoom)-backImage.height;
       var roundedY = Math.floor(initialY / backImage.height)*backImage.height;
 
-      var initialX = player.x-((canvas.width / 2) / backZoom)-backImage.width;
+      var initialX = game.player.x-((canvas.width / 2) / backZoom)-backImage.width;
       var roundedX = Math.floor(initialX / backImage.width)*backImage.width;
       for(var backX = roundedX; backX < roundedX + (canvas.width/backZoom)+(2 * backImage.width); backX += backImage.width) {
         var initY = roundedY;
@@ -197,27 +239,27 @@ $(function() {
     context.translate(translationX,translationY);
     context.scale(1/backZoom, 1/backZoom);
 
-    context.scale(zoom, zoom);
+    context.scale(game.zoom, game.zoom);
 
     context.translate(-translationX,-translationY);
 
 
-    entrance.render(context);
-    exit.render(context);
+    game.entrance.render(context);
+    game.exit.render(context);
 
-    for(i in spikes) {
-      spikes[i].render(context);
+    for(i in game.spikes) {
+      game.spikes[i].render(context);
     }
 
-    for(i in platforms) {
-      platforms[i].render(context);
+    for(i in game.platforms) {
+      game.platforms[i].render(context);
     }
 
-    for(i in batteries) {
-      batteries[i].render(context);
+    for(i in game.batteries) {
+      game.batteries[i].render(context);
     }
 
-    player.render(context);
+    game.player.render(context);
     
 
     requestAnimFrame(render);

@@ -21,6 +21,10 @@ function Spike(left, top, width, height, tile) {
   };
 
   this.bounds = function() {
+
+    if(cachedBounds.top == top && tile.height > 0) {
+      cachedBounds.top = (top+height)-tile.height;
+    }
     return cachedBounds;
   };
 }

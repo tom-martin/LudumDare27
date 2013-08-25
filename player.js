@@ -1,4 +1,4 @@
-function Player(initX, initY, img, jumpImg) {
+function Player(initX, initY, img, jumpImg, deadImg) {
   this.x = initX;
   this.y = initY;
 
@@ -21,11 +21,17 @@ function Player(initX, initY, img, jumpImg) {
 
   this.jumping = false;
 
+  this.dead = false;
+
   this.update = function(dt, keys) {
     this.nextX = this.x;
     this.nextY = this.y;
 
     this.fuel = Math.max(0, this.fuel-dt);
+
+    if(this.fuel == 0) {
+      this.dead = true;
+    }
 
     if(keys['left']) {
       this.xVelocity = Math.max(-this.maxSpeed, this.xVelocity - dt * this.xAcceleration);
@@ -74,6 +80,10 @@ function Player(initX, initY, img, jumpImg) {
     var image = img;
     if(this.jumping) {
       image = jumpImg;
+    }
+
+    if(this.dead) {
+      image = deadImg;
     }
 
     context.drawImage(image, -(img.width / 2), -(img.height / 2));
@@ -143,6 +153,9 @@ function Player(initX, initY, img, jumpImg) {
       if(!other.isOpen) {
         other.open();
       }
+    } else if(other.constructor.name == "Spike") {
+      this.dead = true;
+      this.xVelocity = 0;
     }
   };
 };

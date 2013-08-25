@@ -14,7 +14,10 @@
    id="svg4483"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 8">
+   sodipodi:docname="spikes.svg"
+   inkscape:export-filename="/home/tomm/LudumDare27/images/spike.png"
+   inkscape:export-xdpi="36.59"
+   inkscape:export-ydpi="36.59">
   <defs
      id="defs4485" />
   <sodipodi:namedview
@@ -51,6 +54,17 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="opacity:0;fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect5024"
+       width="405.07114"
+       height="463.66006"
+       x="-528.30975"
+       y="297.77823"
+       ry="0"
+       inkscape:export-filename="/home/tomm/LudumDare27/images/spike.png"
+       inkscape:export-xdpi="36.59"
+       inkscape:export-ydpi="36.59" />
     <path
        style="fill:#a1a1a1;fill-opacity:1;stroke:none"
        d="m -544.47222,663.45345 41.95645,-200.0102 45.10319,209.10158 33.56517,-346.48233 80.76617,401.03057 57.69014,-174.7564 67.13032,117.1777 73.4238,-237.38585 36.7119,228.29448 0,0 1.04891,110.10662 -437.39605,-4.04061 z"
@@ -61,7 +75,7 @@
        sodipodi:nodetypes="ccccccccccc"
        inkscape:connector-curvature="0"
        id="path5003"
-       d="M -115.15739,770.52962 -536.391,766.48901 m 0,-103.03556 40.4061,-200.0102 43.43656,209.10158 32.32488,-346.48233 77.78174,401.03057 55.5584,-174.7564 64.64976,117.1777 70.71068,-237.38585 35.35534,228.29448"
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       d="M -115.15739,770.52962 -536.391,766.48901 m -5.05076,-105.05587 45.45686,-197.98989 43.43656,209.10158 32.32488,-346.48233 77.78174,401.03057 55.5584,-174.7564 64.64976,117.1777 70.71068,-237.38585 42.42641,230.31479"
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
   </g>
 </svg>
