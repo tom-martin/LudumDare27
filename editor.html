@@ -149,11 +149,19 @@ $(function() {
     if(currentPlatform != null) {
       console.log(currentPlatform);
       context.fillRect(currentPlatform[0], currentPlatform[1], currentPlatform[2], currentPlatform[3]);
+
+      context.beginPath();
+      context.rect(currentPlatform[0], currentPlatform[1], currentPlatform[2], currentPlatform[3]);
+      context.stroke();
     }
 
     for(i in level.platforms) {
       var p = level.platforms[i];
-      context.fillRect(p[0], p[1], p[2], p[3]) 
+      context.fillRect(p[0], p[1], p[2], p[3]);
+
+      context.beginPath();
+      context.rect(p[0], p[1], p[2], p[3]) 
+      context.stroke();
     }
 
     context.fillStyle="#00FF00";
@@ -161,9 +169,6 @@ $(function() {
       var b = level.batteries[i];
       context.fillRect(b[0]-5,b[1]-5,10,10);
     }
-      
-
-   
 
     requestAnimFrame(render);
   }
