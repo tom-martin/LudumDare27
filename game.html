@@ -23,12 +23,13 @@ var requestAnimFrame = (function(){
 </style>
   </head>
   <body>
-    <canvas id="gameCanvas" width="1440" height="900">Fallback content, in case the browser does not support Canvas.</canvas>
+    <canvas id="gameCanvas" width="1280" height="600">Fallback content, in case the browser does not support Canvas.</canvas>
     <p id="fps">0<p>
     <script src="player.js"></script>
     <script src="platform.js"></script>
     <script src="collision.js"></script>
     <script src="battery.js"></script>
+    <script src="door.js"></script>
     <script src="levels.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
@@ -90,11 +91,19 @@ $(function() {
   var battery2Image = new Image();
   battery2Image.src = "images/battery2.png";
 
-  var player = new Player(0, 0, playerImage, jumpImage);
+  var door1Image = new Image();
+  door1Image.src = "images/door1.png";
+
+  var door2Image = new Image();
+  door2Image.src = "images/door2.png";
+
+  var doorOpenImage = new Image();
+  doorOpenImage.src = "images/opendoor.png";
 
   var platforms = [];
   var entities = [];
   var batteries = [];
+
   for(i in level1.platforms) {
     var p = level1.platforms[i];
     var newP = new Platform(p[0], p[1], p[2], p[3], platformImage);
@@ -108,6 +117,14 @@ $(function() {
     batteries.push(newB);
     entities.push(newB)
   }
+
+  var entrance = new Door(level1.entrance[0], level1.entrance[1], door1Image, door2Image, doorOpenImage);
+  entrance.open();
+
+  var exit = new Door(level1.exit[0], level1.exit[1], door1Image, door2Image, doorOpenImage);
+  entities.push(exit);
+
+  var player = new Player(level1.entrance[0], level1.entrance[1], playerImage, jumpImage);
   
   var collison = new CollisionManager(player, entities);
 
@@ -170,6 +187,9 @@ $(function() {
 
     context.translate(-translationX,-translationY);
 
+
+    entrance.render(context);
+    exit.render(context);
 
     for(i in platforms) {
       platforms[i].render(context);

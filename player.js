@@ -58,6 +58,7 @@ function Player(initX, initY, img, jumpImg) {
   this.applyUpdate = function() {
     if(this.y < this.nextY && this.onGround) {
       this.onGround = false;
+      this.jumping = false;
     }
     this.x = this.nextX;
     this.y = this.nextY;
@@ -137,6 +138,10 @@ function Player(initX, initY, img, jumpImg) {
       if(!other.isCollected) {
         other.collected();
         this.fuel += 1000;
+      }
+    } else if(other.constructor.name == "Door") {
+      if(!other.isOpen) {
+        other.open();
       }
     }
   };
