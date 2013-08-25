@@ -110,7 +110,7 @@ function Player(initX, initY, fuelEnabled, img, img2, jumpImg, deadImg, cloudImg
     context.rotate(-rotation);
 
     var image = img;
-    if(Date.now() % 1600 > 1200) {
+    if(Date.now() % 2000 > 1800) {
       image = img2;
     }
 
@@ -138,6 +138,9 @@ function Player(initX, initY, fuelEnabled, img, img2, jumpImg, deadImg, cloudImg
       
       context.font = "bold 72px Courier";
       context.fillStyle = "white";
+      if(this.fuel < 1000) {
+        context.fillStyle = "#AA1010";
+      }
       context.fillText(fuelString, -40, -(img.height)+50);
       context.lineWidth = 2;
       context.strokeText(fuelString, -40, -(img.height)+50);
