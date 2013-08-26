@@ -24,7 +24,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
+     inkscape:zoom="0.24748738"
      inkscape:cx="-636.2456"
      inkscape:cy="192.68961"
      inkscape:document-units="px"
@@ -32,9 +32,9 @@
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="2495"
-     inkscape:window-height="1416"
-     inkscape:window-x="1985"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
@@ -74,8 +74,8 @@
        ry="106.81365"
        rx="106.81365"
        inkscape:export-filename="/home/tomm/LudumDare27/images/back.png"
-       inkscape:export-xdpi="37.549999"
-       inkscape:export-ydpi="37.549999" />
+       inkscape:export-xdpi="10.73"
+       inkscape:export-ydpi="10.73" />
     <path
        sodipodi:type="arc"
        style="fill:none;fill-opacity:1;stroke:#878787;stroke-width:20;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
