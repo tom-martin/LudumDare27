@@ -15,7 +15,7 @@ function Player(initX, initY, fuelEnabled, img, img2, jumpImg, deadImg, cloudImg
   this.onGround = false;
   this.gravityAcceleration = 0.002;
   this.yVelocity = 0;
-  this.maxYSpeed = 10;
+  this.maxYSpeed = 5;
 
   this.jumpImpulse = -1.5;
 

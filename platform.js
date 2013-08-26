@@ -6,7 +6,7 @@ function Platform(left, top, width, height, tile) {
     bottom: top + height
   };
 
-  this.render = function(context) {
+  this.render = function(context, screenBounds) {
     context.save();
     context.beginPath();
     context.rect(left,top,width,height);
@@ -15,7 +15,16 @@ function Platform(left, top, width, height, tile) {
     if(tile.width > 0) {
       for(var y = -15; y < height; y+= tile.height-15) {
         for(var x = -50; x < width; x+= tile.width-100) {
-          context.drawImage(tile, left+x, top+y);
+          var tLeft = left+x;
+          var tTop = top+y;
+          var tRight = tLeft + tile.width;
+          var tBottom = tTop + tile.height;
+          if(!(tRight < screenBounds.left ||
+               tLeft > screenBounds.right ||
+               tBottom < screenBounds.top ||
+               tTop > screenBounds.bottom)) {
+            context.drawImage(tile, tLeft, tTop);
+          }
         }
       }
     }

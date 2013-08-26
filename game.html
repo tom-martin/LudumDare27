@@ -25,7 +25,7 @@ var requestAnimFrame = (function(){
   <body style="background-color: #f9f3d4;">
     <div style="margin: auto;width: 1280px;">
       <canvas id="gameCanvas" width="1440" height="800">Fallback content, in case the browser does not support Canvas.</canvas>
-      <p id="fps">0<p>
+      <p id="fps"><p>
     </div>
     <script src="player.js"></script>
     <script src="platform.js"></script>
@@ -160,6 +160,13 @@ $(function() {
   var game = {};
   var levelIndex = 0;
 
+  var screenBounds = {
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0
+  }
+
   function reset(level) {
     game.targetZoom = 0.5;
     game.platforms = [];
@@ -223,7 +230,7 @@ $(function() {
     var nts = Date.now();
     var dt = 0
     if(previousTs > -1) {
-      dt = nts - previousTs;
+      dt = Math.min(100, nts - previousTs);
 
       // var thisFrameFPS = 1000 / (dt);
       // fps += (thisFrameFPS - fps) / 50;
@@ -331,34 +338,39 @@ $(function() {
     context.translate(Math.round(canvas.width/2),Math.round(canvas.height/2));
 
 
-    var backZoom = game.zoom / 2;
-    context.scale(backZoom, backZoom);
+    var backZoom = 0.25;
+    var fakeZoomCorrection = 1 / backZoom;
+    var backTransX = -translationX / fakeZoomCorrection;
+    var backTransY = -translationY / fakeZoomCorrection;
 
-    context.translate(-translationX,-translationY);
+    context.translate(backTransX, backTransY);
 
     if(backImage.width > 0) {
-      var initialY = game.player.y-((canvas.height / 2) / backZoom)-backImage.height;
+      var initialY = -backTransY-((canvas.height / 2))-backImage.height;
       var roundedY = Math.floor(initialY / backImage.height)*backImage.height;
 
-      var initialX = game.player.x-((canvas.width / 2) / backZoom)-backImage.width;
+      var initialX = -backTransX-((canvas.width / 2))-backImage.width;
       var roundedX = Math.floor(initialX / backImage.width)*backImage.width;
-      for(var backX = roundedX; backX < roundedX + (canvas.width/backZoom)+(2 * backImage.width); backX += backImage.width) {
+      for(var backX = roundedX; backX < roundedX + (canvas.width)+(2 * backImage.width); backX += backImage.width) {
         var initY = roundedY;
         if((backX / backImage.width) % 2 == 0) {
           initY += (backImage.height / 2);
         }
-        for(var backY = initY; backY < roundedY + (canvas.height/backZoom)+(2 * backImage.height); backY += backImage.height) {
+        for(var backY = initY; backY < roundedY + (canvas.height)+(2 * backImage.height); backY += backImage.height) {
           context.drawImage(backImage, backX, backY);
         }
       }
     }
 
-    context.translate(translationX,translationY);
-    context.scale(1/backZoom, 1/backZoom);
-
+    context.translate(-backTransX, -backTransY);
     context.scale(game.zoom, game.zoom);
 
     context.translate(-translationX,-translationY);
+
+    screenBounds.left = translationX - (canvas.width / (2 * game.zoom));
+    screenBounds.top = translationY - (canvas.height / (2 * game.zoom));
+    screenBounds.right = translationX + (canvas.width / (2 * game.zoom));
+    screenBounds.bottom = translationY + (canvas.height / (2 * game.zoom));
 
 
     game.entrance.render(context);
@@ -369,7 +381,15 @@ $(function() {
     }
 
     for(i in game.platforms) {
-      game.platforms[i].render(context);
+      var platform = game.platforms[i];
+      var bounds = platform.bounds();
+
+      if(!(platform.right < screenBounds.left ||
+            platform.left > screenBounds.right ||
+            platform.bottom < screenBounds.top ||
+            platform.top > screenBounds.bottom))  {
+        platform.render(context, screenBounds);
+      }
     }
 
     for(i in game.batteries) {
